@@ -18,7 +18,7 @@ export const Projects: Array<Project> = [
   {
     title: 'Lunar UX',
     description: 'I created a website for a company that sells services.',
-    urlDirect: 'https://fiqtor.sytes.net/lunar-ux',
+    urlDirect: 'https://lunar-ux.vercel.app',
     srcImage: '/img/projects/lunar-ux.webp',
     icons: [
       {
@@ -41,7 +41,7 @@ export const Projects: Array<Project> = [
   {
     title: 'Hardware Universe',
     description: 'I created a website for a company that sells services.',
-    urlDirect: 'https://fiqtor.sytes.net/hardware-universe',
+    urlDirect: 'https://hardware-universe.vercel.app',
     srcImage: '/img/projects/hardware-universe.webp',
     icons: [
       {

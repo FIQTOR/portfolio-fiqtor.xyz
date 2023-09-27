@@ -1,3 +1,5 @@
+// git push --set-upstream fiqtor.sytes.net master
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
