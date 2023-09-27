@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,42 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e8e8e8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #57534e;
+    border-radius: 5px;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  padding: 3px 10px;
+  background-color: #a3a3a3;
+  transform: translateY(-50px);
+  border-radius: 5px;
+  color: white;
+  scale: 0;
+  transition: 150ms;
+}
+.tooltip:hover::before {
+  scale: 1;
 }
