@@ -73,15 +73,15 @@ async function Contributions() {
             </p>
           </div>
           <div className='w-full p-[10px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800 dark:bg-neutral-800'>
-            <h3>This week</h3>
-            <p className='text-green-400 text-2xl font-semibold'>
-              {contributionsData.thisWeek}
-            </p>
-          </div>
-          <div className='w-full p-[10px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800 dark:bg-neutral-800'>
             <h3>This Month</h3>
             <p className='text-green-400 text-2xl font-semibold'>
               {contributionsData.thisMonth}
+            </p>
+          </div>
+          <div className='w-full p-[10px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800 dark:bg-neutral-800'>
+            <h3>This week</h3>
+            <p className='text-green-400 text-2xl font-semibold'>
+              {contributionsData.thisWeek}
             </p>
           </div>
           {/* <div className='m-[10px] p-[10px] rounded-md border-[1px] border-stone-300'>
@@ -97,7 +97,7 @@ async function Contributions() {
             <div className='w-full flex justify-start'>
               {data && data.user.contributionsCollection.contributionCalendar.months.slice(1).map((month: any, index: number) =>
                 <div key={index} style={{ minWidth: `${(month.totalWeeks * 1.9)}%` }}>
-                    <p className='text-[12px] md:text-base'>{month.name}</p>
+                  <p className='text-[12px] md:text-base'>{month.name}</p>
                 </div>
               )}
             </div>
@@ -106,7 +106,7 @@ async function Contributions() {
                 <div key={index} className='w-full flex flex-col gap-[1px] md:gap-[3px]'>
                   {week.contributionDays.map((contributionDay: any, index_: number) =>
                     <div key={index_} className={`w-full aspect-square bg-neutral-300 dark:bg-neutral-800`} style={{
-                      backgroundColor: `${((contributionDay.contributionCount != 0) ? contributionDay.color : '' )}`
+                      backgroundColor: `${((contributionDay.contributionCount == 0) ? '' : contributionDay.color)}`
                     }} />
                   )}
                 </div>
@@ -168,10 +168,9 @@ async function getContributions() {
 }
 
 function getContributionsCount(data: any) {
-  let total = '0';
-  let thisWeek = '0';
-  let thisMonth = '0';
-  let totalWeeks = '0';
+  let total = "";
+  let thisWeek = "";
+  let thisMonth = "";
   if (data != null && data != '') {
     total = JSON.stringify(data.user.contributionsCollection.contributionCalendar.totalContributions);
     var indexWeek = data.user.contributionsCollection.contributionCalendar.weeks.length - 1;
@@ -181,19 +180,21 @@ function getContributionsCount(data: any) {
     }
     thisWeek = JSON.stringify(ccount);
 
-    var indedxMonth = data.user.contributionsCollection.contributionCalendar.months.length - 1;
-    let totalWeeks = data.user.contributionsCollection.contributionCalendar.months[indedxMonth].totalWeeks;
+    var indexMonth = data.user.contributionsCollection.contributionCalendar.months.length - 1;
+    let totalWeeks = data.user.contributionsCollection.contributionCalendar.months[indexMonth].totalWeeks;
     indexWeek = data.user.contributionsCollection.contributionCalendar.weeks.length - totalWeeks;
     ccount = 0;
-    for (var i = 0; i < data.user.contributionsCollection.contributionCalendar.weeks[indexWeek].contributionDays.length; i++) {
-      ccount += data.user.contributionsCollection.contributionCalendar.weeks[indexWeek].contributionDays[i].contributionCount;
+    for (var a = indexWeek; a <= (data.user.contributionsCollection.contributionCalendar.weeks.length - 1); a++) {
+      for (var i = 0; i < data.user.contributionsCollection.contributionCalendar.weeks[indexWeek].contributionDays.length; i++) {
+        if(data.user.contributionsCollection.contributionCalendar.weeks[a].contributionDays[i]) {
+          ccount += data.user.contributionsCollection.contributionCalendar.weeks[a].contributionDays[i].contributionCount;
+        }
+      }
     }
-
-
     thisMonth = JSON.stringify(ccount);
 
   }
-  let contributionsData = { total, thisWeek, thisMonth, totalWeeks };
+  let contributionsData = { total, thisMonth, thisWeek };
 
   return contributionsData;
 }

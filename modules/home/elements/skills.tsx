@@ -102,7 +102,7 @@ export default function SkillsSection() {
         <div className='flex flex-col md:flex-row flex-wrap gap-[20px]'>
 
           {Skills.API?.map((item: any, index: number) => (
-            <div key={index} className='w-full md:max-w-[300px] border-[1px] 
+            <div key={index} className='w-full md:max-w-[350px] border-[1px] 
               border-stone-300 p-[20px] rounded-xl flex flex-col gap-[20px]
               md:hover:scale-105 md:duration-300 dark:border-neutral-800 dark:bg-neutral-800'>
               <h2 className='flex items-center gap-[10px] text-lg font-semibold'>

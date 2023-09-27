@@ -9,7 +9,7 @@ export default function index() {
         className='max-w-sm w-full flex flex-col gap-4 text-stone-600 dark:text-neutral-300'>
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase" />
-        <input type="hidden" name="_subject" value={`New submission! | ${METADATA.openGraph.url}`} />
+        <input type="hidden" name="_subject" value={`New submission! | Website`} />
         <h1 className='text-4xl font-semibold text-stone-800 dark:text-neutral-200'>Contact Me</h1>
         <div className='flex flex-col gap-2'>
           <label htmlFor="name">
