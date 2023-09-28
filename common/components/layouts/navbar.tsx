@@ -87,7 +87,7 @@ const navLink = (title: string, svg: any, handle: any, url: string) => (
 )
 const brandLink = (svg: any, url: string) => (
   <a href={url} target='_blank' className='flex text-stone-600 hover:opacity-70
-    hover:scale-110 duration-300 dark:text-neutral-300' aria-label='hai'>
+    hover:scale-110 duration-300 dark:text-neutral-300' aria-label={url}>
     {svg}
   </a>
 )

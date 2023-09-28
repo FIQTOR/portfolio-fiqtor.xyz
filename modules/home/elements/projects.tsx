@@ -18,7 +18,8 @@ export default function ProjectsSection() {
 
       <div className='flex flex-col md:flex-row gap-[20px] pt-[20px]'>
         {Projects.slice(0, 3).map((project: any, index: number) => (
-          <a key={index} href={project.urlDirect} className='w-full h-auto md:max-w-[33%] border-[1px] border-stone-300 rounded-xl
+          <a key={index} href={project.urlDirect} aria-label={project.title}
+          className='w-full h-auto md:max-w-[33%] border-[1px] border-stone-300 rounded-xl
           hover:scale-105 duration-300 flex flex-col dark:border-neutral-800 dark:bg-neutral-800'>
             <img src={project.srcImage} alt="projectImage.webp" width={'100%'} height={'100%'}
               className='bg-cover rounded-t-xl' />
@@ -39,7 +40,7 @@ export default function ProjectsSection() {
       </div>
       <div className='w-full h-24 flex justify-center items-center'>
         <Link href={`/projects`}
-          className='text-blue-400 flex gap-[5px] items-center hover:opacity-70 duration-100 self-end'>View All Project
+          className='text-blue-600 dark:text-blue-300 flex gap-[5px] items-center hover:opacity-70 duration-100 self-end'>View All Project
           <TbEye className='h-full w-6' />
         </Link>
       </div>
