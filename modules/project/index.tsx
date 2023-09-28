@@ -15,7 +15,7 @@ export default function Project() {
       <div className='flex flex-wrap flex-col md:flex-row gap-[20px] pt-[20px]'>
 
         {Projects.map((project: any, index: number) => (
-          <a key={index} href={project.urlDirect} aria-label={`Card ${project.title}`}
+          <a key={index} href={project.urlDirect} aria-label={`Open Website ${project.title}`}
           className='w-full h-auto md:max-w-[350px] border-[1px] border-stone-300 rounded-xl
           hover:scale-105 duration-300 flex flex-col dark:border-neutral-800 dark:bg-neutral-800'>
             <img src={project.srcImage} alt="projectImage.webp" width={'100%'} height={'100%'}
