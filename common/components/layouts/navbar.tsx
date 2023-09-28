@@ -41,7 +41,7 @@ export default function Navbar() {
       flex flex-col duration-500
         ${navToggle ? 'left-0' : '-left-[400px]'}`}>
         <li>
-          <Link href='/#' onClick={() => handleNav(false)}
+          <Link href='/' onClick={() => handleNav(false)}
             className='h-fit mx-[10%] mt-[50px] py-[20px] flex items-center gap-[10px] border-b-[1px] border-stone-400'>
             <img src="/icon.webp" alt="icon.webp" width='80' height='80'
               className='rounded-full' />
