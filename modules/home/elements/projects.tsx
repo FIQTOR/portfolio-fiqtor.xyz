@@ -18,7 +18,7 @@ export default function ProjectsSection() {
 
       <div className='flex flex-col md:flex-row gap-[20px] pt-[20px]'>
         {Projects.slice(0, 3).map((project: any, index: number) => (
-          <a key={index} href={project.urlDirect} aria-label='Open Demo'
+          <a key={index} href={project.urlDirect}
           className='w-full h-auto md:max-w-[33%] border-[1px] border-stone-300 rounded-xl
           hover:scale-105 duration-300 flex flex-col dark:border-neutral-800 dark:bg-neutral-800'>
             <img src={project.srcImage} alt="projectImage.webp" width={'100%'} height={'100%'}

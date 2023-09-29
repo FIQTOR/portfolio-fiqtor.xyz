@@ -130,32 +130,29 @@ async function getContributions() {
   const body = {
     "query": `query {
       user(login: "${username}") {
-        name
-        createdAt
         contributionsCollection {
           contributionCalendar {
-            colors 
+            colors
             totalContributions
+            months {
+              firstDay
+              name
+              totalWeeks
+            }
             weeks {
               contributionDays {
-                weekday
-                date 
-                contributionCount 
                 color
+                contributionCount
+                date
               }
-            }
-            months  {
-              name
-              year
-              firstDay 
-              totalWeeks
+              firstDay
             }
           }
         }
       }
     }`
   }
-  const response = await fetch(
+  let response = await fetch(
     'https://api.github.com/graphql',
     { method: 'POST', body: JSON.stringify(body), headers: headers });
   await new Promise(r => setTimeout(r, 2000))
