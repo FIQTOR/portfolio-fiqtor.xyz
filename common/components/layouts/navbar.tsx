@@ -36,6 +36,7 @@ export default function Navbar() {
           <path d="M13 7l5 5l-5 5"></path>
         </svg>
       </label>
+      {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30'></div> : ''}
       <ul className={`absolute w-[300px] md:w-[400px] h-screen top-0 bg-stone-100 dark:bg-neutral-900 border-[1px] 
       border-stone-300 dark:border-stone-800 
       flex flex-col duration-500
