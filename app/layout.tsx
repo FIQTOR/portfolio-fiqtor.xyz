@@ -1,4 +1,4 @@
-// git push --set-upstream fiqtor.sytes.net master
+// git push --set-upstream fiqtor.xyz master
 
 import './globals.css'
 import type { Metadata } from 'next'
