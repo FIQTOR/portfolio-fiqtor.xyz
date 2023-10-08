@@ -7,7 +7,7 @@ import Projects from './elements/projects'
 export default function index() {
   return (
     <>
-      <header className='w-full h-screen flex flex-col md:flex-row items-center'>
+      <header className='w-full h-screen flex flex-col md:flex-row items-center gap-14'>
         <div className='w-full md:w-1/2 h-1/3 md:h-full flex flex-col justify-center pt-14 px-[5%]
         z-[1]'>
           <h1 className='text-5xl'>Hi There,</h1>

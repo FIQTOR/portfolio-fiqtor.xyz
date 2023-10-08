@@ -20,7 +20,7 @@ export default function Navbar() {
       <label htmlFor="dark" className={`absolute w-7 h-7 bg-[#121212] rounded-full z-10 duration-500 ease-out cursor-pointer
       -translate-y-10 right-[-50px] dark:translate-y-[5px] dark:right-[15px]`}></label>
       <input type="checkbox" onClick={() => setTheme(theme == "dark" ? "light" : "dark")} id='dark'
-        className={`absolute top-[10px] right-[20px] w-8 h-8 rounded-full cursor-pointer appearance-none duration-500
+        className={`absolute top-[10px] right-[20px] w-8 h-8 rounded-full cursor-pointer appearance-none duration-200
         bg-yellow-300 dark:bg-slate-200`} />
 
       {/* Show Sidebar Button */}
@@ -39,7 +39,7 @@ export default function Navbar() {
       {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30'></div> : ''}
       <ul className={`absolute w-[300px] md:w-[400px] h-screen top-0 bg-stone-100 dark:bg-neutral-900 border-[1px] 
       border-stone-300 dark:border-stone-800 
-      flex flex-col duration-500
+      flex flex-col duration-300
         ${navToggle ? 'left-0' : '-left-[400px]'}`}>
         <li>
           <Link href='/' onClick={() => handleNav(false)}
