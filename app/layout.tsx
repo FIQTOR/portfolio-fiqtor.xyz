@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: METADATA.description,
   keywords: METADATA.keyword,
   creator: METADATA.creator,
-  metadataBase: new URL('https://localhost'),
+  metadataBase: new URL('https://fiqtor.xyz'),
   authors: {
     name: METADATA.creator,
     url: METADATA.openGraph.url,

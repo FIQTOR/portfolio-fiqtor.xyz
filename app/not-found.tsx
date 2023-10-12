@@ -7,10 +7,14 @@ export default function NotFound() {
       <header className='w-full h-screen flex flex-col md:flex-row items-center'>
         <div className='w-full h-full flex items-center justify-center'>
           <div className='flex gap-[20px]'>
-            <h1 className='text-6xl font-bold'>404</h1>
+            <h1 className='text-6xl font-bold text-neutral-600'>
+              404</h1>
             <div>
-              <p className='text-2xl'>PAGE NOT FOUND!</p>
-              <Link href='/' className='text-2xl text-blue-500'>GO TO MAIN PAGE</Link>
+              <p className='text-2xl'>
+                PAGE NOT FOUND :(</p>
+              <Link href='/' className='text-2xl text-blue-500
+              hover:opacity-70'>
+                GO TO MAIN PAGE</Link>
             </div>
           </div>
         </div>

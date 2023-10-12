@@ -39,10 +39,10 @@ export const Projects: Array<Project> = [
     ],
   },
   {
-    title: 'Hardware Universe',
+    title: 'Hardware Harmony',
     description: 'I created a website for a company that sells services.',
-    urlDirect: 'https://hardware-universe.vercel.app',
-    srcImage: '/img/projects/hardware-universe.webp',
+    urlDirect: 'https://hardware-harmony.vercel.app',
+    srcImage: '/img/projects/hardware-harmony.webp',
     icons: [
       {
         SvgIcon: SiNextdotjs,
