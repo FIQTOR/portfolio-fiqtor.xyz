@@ -3,9 +3,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from '@/common/components/layouts/navbar'
 import { METADATA } from '@/common/constant/metadata'
-import Footer from '@/common/components/layouts/footer'
 import ThemeProviderContext from '@/context/ThemeProviderContext'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -47,9 +45,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProviderContext>
-          <Navbar />
           {children}
-          <Footer />
         </ThemeProviderContext>
         <Analytics />
       </body>

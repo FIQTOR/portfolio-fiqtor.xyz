@@ -4,13 +4,22 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBrandVscode, TbBrandYoutube, TbCloudComputing, TbStack2 } from 'react-icons/tb';
+import { Menu } from '../constant/menu';
 
-export default function Navbar() {
+interface navProps {
+  pageName: string;
+  handleNavigation: any;
+}
+
+export default function Navbar({ pageName, handleNavigation }: navProps) {
   const { theme, setTheme } = useTheme()
   const [navToggle, setNavToggle] = useState(false);
 
-  function handleNav(value: boolean) {
+  function handleMobileNav(value: boolean, pageName?: string) {
     setNavToggle(value);
+    if(pageName) {
+      handleNavigation(pageName);
+    }
   }
 
 
@@ -24,7 +33,7 @@ export default function Navbar() {
         bg-yellow-300 dark:bg-slate-200`} />
 
       {/* Show Sidebar Button */}
-      <input type='submit' id='navbar' hidden onClick={() => handleNav(!navToggle)} />
+      <input type='submit' id='navbar' hidden onClick={() => handleMobileNav(!navToggle)} />
       <label htmlFor="navbar" className={`absolute z-10 duration-500
       top-[10px] cursor-pointer
       ${navToggle ? 'left-[250px] md:left-[350px] rotate-180' : 'left-[10px] rotate-0'}`}>
@@ -36,13 +45,13 @@ export default function Navbar() {
           <path d="M13 7l5 5l-5 5"></path>
         </svg>
       </label>
-      {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30'></div> : ''}
+      {navToggle ? <div onClick={() => setNavToggle(false)} className='hidden top-0 left-0 w-full h-screen bg-black opacity-30'></div> : ''}
       <ul className={`absolute w-[300px] md:w-[400px] h-screen top-0 bg-stone-100 dark:bg-neutral-900 border-[1px] 
       border-stone-300 dark:border-stone-800 
       flex flex-col duration-300
         ${navToggle ? 'left-0' : '-left-[400px]'}`}>
         <li>
-          <Link href='/' onClick={() => handleNav(false)}
+          <Link href='/' onClick={() => handleMobileNav(false)}
             className='h-fit mx-[10%] mt-[50px] py-[20px] flex items-center gap-[10px] border-b-[1px] border-stone-400'>
             <img src="/icon.webp" alt="icon.webp" width='80' height='80'
               className='rounded-full' />
@@ -54,24 +63,26 @@ export default function Navbar() {
           </Link>
         </li>
         <li className='my-[20px] mx-[5%] flex flex-col gap-[10px]'>
-          {navLink('About', <TbCloudComputing className='w-7 h-7' />, handleNav, '#about')}
-          {navLink('Skills', <TbBrandVscode strokeWidth='1' className='w-7 h-7' />, handleNav, '#skills')}
-          {navLink('Projects', <TbStack2 className='w-7 h-7' />, handleNav, 'projects')}
+          {Menu.map((menu: any, index: number) => (
+            <>
+              {navLink(menu, index, handleMobileNav, pageName)}
+            </>
+          ))}
         </li>
         <li className='flex flex-col items-center gap-[5px] my-[10px]'>
           <p>Interested in Working Together?</p>
-          <Link href='/talk' onClick={() => handleNav(false)}
-            className='m-auto bg-stone-300 px-[20%] py-[10px]
+          <Link href='/talk' onClick={() => handleMobileNav(false)}
+            className='m-auto bg-neutral-300 px-[20%] py-[10px]
           rounded-full hover:opacity-70 drop-shadow-md duration-300
         dark:bg-neutral-700'>
             Let's Talk
           </Link>
           <div className='flex gap-[10px] my-[5px]'>
-            {brandLink(<TbBrandInstagram className='w-7 h-7' />, 'https://www.instagram.com/fiqtorr')}
-            {brandLink(<TbBrandGithub className='w-7 h-7' />, 'https://www.github.com/fiqtor')}
-            {brandLink(<TbBrandYoutube className='w-7 h-7' />, 'https://www.youtube.com/@fiqtor')}
-            {brandLink(<TbBrandLinkedin className='w-7 h-7' />, 'https://www.linkedin.com/in/taufiiqul-hakim2007')}
-            {brandLink(<TbBrandTiktok className='w-7 h-7' />, 'https://www.tiktok.com/@fiqtor')}
+            {brandLink(TbBrandInstagram, 'https://www.instagram.com/fiqtorr')}
+            {brandLink(TbBrandGithub, 'https://www.github.com/fiqtor')}
+            {brandLink(TbBrandYoutube, 'https://www.youtube.com/@fiqtor')}
+            {brandLink(TbBrandLinkedin, 'https://www.linkedin.com/in/taufiiqul-hakim2007')}
+            {brandLink(TbBrandTiktok, 'https://www.tiktok.com/@fiqtor')}
           </div>
         </li>
       </ul>
@@ -79,16 +90,18 @@ export default function Navbar() {
   )
 }
 
-const navLink = (title: string, svg: any, handle: any, url: string) => (
-  <Link href={`/${url}`} onClick={() => handle(false)} className='w-full px-[5%] py-[10px] 
-    hover:bg-stone-300 hover:dark:bg-neutral-800 hover:scale-105 flex items-center 
-    gap-[5px] rounded-[10px] duration-300'>
-    {svg} {title}
+const navLink = (menu: any, index: number, handle: any, pageName: string) => (
+  <Link href={menu.urlDirect} onClick={() => handle(false, menu.label)} className={`w-full px-[5%] py-[10px] 
+    hover:scale-105 flex items-center 
+    gap-[5px] rounded-[10px] duration-300 ${(menu.label == pageName) ? 
+    'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}
+    key={index}>
+    <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
   </Link>
 )
-const brandLink = (svg: any, url: string) => (
-  <a href={url} target='_blank' className='flex text-stone-600 hover:opacity-70
+const brandLink = (Svg: any, url: string) => (
+  <a href={url} target='_blank' className='flex text-neutral-800 hover:opacity-70
     hover:scale-110 duration-300 dark:text-neutral-300' aria-label={url}>
-    {svg}
+    <Svg className='w-7 h-7' strokeWidth='1.3' />
   </a>
 )

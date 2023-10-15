@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { METADATA } from '@/common/constant/metadata';
 import Home from '@/modules/home';
-import Container from '@/common/components/elements/container';
+import Layout from '@/common/layouts/layout';
 
 export const metadata: Metadata = {
   title: `Personal Website ${METADATA.exTitle}`,
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   return (
-    <Container>
+    <Layout>
       <Home />
-    </Container>
+    </Layout>
   )
 }

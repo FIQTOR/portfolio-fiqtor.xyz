@@ -1,4 +1,4 @@
-import Loading from '@/common/components/layouts/loading';
+import Loading from '@/common/components/loading';
 import { METADATA } from '@/common/constant/metadata'
 import React, { Suspense } from 'react'
 import { TbBrandGithub, TbCloudComputing, TbEye } from 'react-icons/tb';

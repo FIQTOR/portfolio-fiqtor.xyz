@@ -9,7 +9,7 @@ import {
   TbBrandVscode
 } from 'react-icons/tb';
 import { FcGoogle } from "react-icons/fc";
-import { Processor } from '@/common/components/elements/lottie';
+import { Processor } from '@/common/components/lottie';
 import { Skills } from '@/common/constant/skills';
 
 export default function SkillsSection() {

@@ -1,4 +1,4 @@
-import Container from '@/common/components/elements/container'
+import Container from '@/common/components/container'
 import { METADATA } from '@/common/constant/metadata'
 import Contact from '@/modules/contact'
 import { Metadata } from 'next'
