@@ -17,9 +17,7 @@ export default function Navbar({ pageName, handleNavigation }: navProps) {
 
   function handleMobileNav(value: boolean, pageName?: string) {
     setNavToggle(value);
-    if(pageName) {
-      handleNavigation(pageName);
-    }
+    {pageName && handleNavigation(pageName)}
   }
 
 
@@ -64,9 +62,9 @@ export default function Navbar({ pageName, handleNavigation }: navProps) {
         </li>
         <li className='my-[20px] mx-[5%] flex flex-col gap-[10px]'>
           {Menu.map((menu: any, index: number) => (
-            <>
-              {navLink(menu, index, handleMobileNav, pageName)}
-            </>
+            <div key={index}>
+              {navLink(menu, handleMobileNav, pageName)}
+            </div>
           ))}
         </li>
         <li className='flex flex-col items-center gap-[5px] my-[10px]'>
@@ -90,12 +88,11 @@ export default function Navbar({ pageName, handleNavigation }: navProps) {
   )
 }
 
-const navLink = (menu: any, index: number, handle: any, pageName: string) => (
+const navLink = (menu: any, handle: any, pageName: string) => (
   <Link href={menu.urlDirect} onClick={() => handle(false, menu.label)} className={`w-full px-[5%] py-[10px] 
     hover:scale-105 flex items-center 
     gap-[5px] rounded-[10px] duration-300 ${(menu.label == pageName) ? 
-    'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}
-    key={index}>
+    'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}>
     <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
   </Link>
 )

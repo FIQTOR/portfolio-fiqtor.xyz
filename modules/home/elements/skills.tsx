@@ -19,9 +19,9 @@ export default function SkillsSection() {
 
       <div className='w-full flex items-center'>
         <div className='w-full md:w-1/2 flex flex-col gap-[30px]'>
-          <div className='flex gap-[10px]'>
-            <TbBrandVscode strokeWidth='1' className='w-[40px] h-[40px] md:w-[50px] md:h-[50px]' />
-            <div>
+          <div className='flex gap-[10px] items-center'>
+            <TbBrandVscode strokeWidth='1' className='w-14 md:w-20 h-full' />
+            <div className='h-fit'>
               <h2 className='text-2xl font-semibold md:text-4xl'>Skills</h2>
               <p className='md:text-xl'>My coding skills.</p>
             </div>

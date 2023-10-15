@@ -12,9 +12,9 @@ export default async function About() {
           <img src="/img/src/mobile2.webp" alt="mobile" height='100%' className='h-full bg-cover' />
         </div>
         <div className='w-full md:w-1/2 flex flex-col gap-[30px]'>
-          <div className='flex gap-[10px]'>
-            <TbCloudComputing className='w-[40px] h-[40px] md:w-[50px] md:h-[50px]' />
-            <div>
+          <div className='flex gap-[10px] items-center'>
+            <TbCloudComputing strokeWidth='1' className='w-14 md:w-20 h-full' />
+            <div className='h-fit'>
               <h2 className='text-2xl font-semibold md:text-4xl'>About Me</h2>
               <p className='md:text-xl'>My description in website development.</p>
             </div>

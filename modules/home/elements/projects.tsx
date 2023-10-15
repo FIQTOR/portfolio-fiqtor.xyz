@@ -9,7 +9,7 @@ export default function ProjectsSection() {
   return (
     <section id='projects' className='px-[5%]'>
       <div className='w-full flex gap-[10px]'>
-        <TbStack2 className='w-[40px] h-[40px] md:w-[50px] md:h-[50px]' />
+        <TbStack2 strokeWidth='1' className='w-14 md:w-16 h-full' />
         <div>
           <h2 className='text-2xl font-semibold md:text-4xl'>Last Projects</h2>
           <p className='md:text-xl'>Here is my best project.</p>
