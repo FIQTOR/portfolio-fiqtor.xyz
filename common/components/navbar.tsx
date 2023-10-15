@@ -58,7 +58,6 @@ export default function Navbar({ pathName }: navProps) {
               <h2 className='text-4xl font-medium'>{METADATA.creator}</h2>
               <p>Full-stack Website Developer</p>
               <p>@fiqtor</p>
-              {pathWithSection}
             </div>
           </Link>
         </li>

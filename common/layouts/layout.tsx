@@ -16,7 +16,6 @@ export default function Container({ children, className = '', ...others }: Conta
         <>
             <Navbar pathName={pathName} />
             <div className={`${className} dark:text-neutral-300`} {...others}>
-                <h1>{pathName}</h1>
                 {children}
             </div>
             <Footer />
