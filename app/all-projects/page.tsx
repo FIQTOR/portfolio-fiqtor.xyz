@@ -14,8 +14,6 @@ export const metadata: Metadata = {
 
 export default function ProjectPage() {
   return (
-    <Layout pageNameProp='All Projects'>
-      <Project />
-    </Layout>
+    <Project />
   )
 }

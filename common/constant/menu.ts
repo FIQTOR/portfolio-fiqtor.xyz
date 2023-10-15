@@ -4,23 +4,27 @@ import { TbBrandVscode, TbCloudComputing, TbStack2 } from 'react-icons/tb';
 type Project = {
   label: string;
   Svg: any;
-  urlDirect: string;
+  pathName: string;
+  section: string;
 };
 
 export const Menu: Array<Project> = [
   {
     label: "About",
     Svg: TbCloudComputing,
-    urlDirect: "/#about"
+    pathName: "/",
+    section: "#about"
   },
   {
     label: "Skills",
     Svg: TbBrandVscode,
-    urlDirect: "/#skills"
+    pathName: "/",
+    section: "#skills"
   },
   {
     label: "All Projects",
     Svg: TbStack2,
-    urlDirect: "/all-projects"
+    pathName: "/all-projects",
+    section: ""
   },
 ];

@@ -7,17 +7,18 @@ import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBran
 import { Menu } from '../constant/menu';
 
 interface navProps {
-  pageName: string;
-  handleNavigation: any;
+  pathName: any;
 }
 
-export default function Navbar({ pageName, handleNavigation }: navProps) {
+export default function Navbar({ pathName }: navProps) {
   const { theme, setTheme } = useTheme()
-  const [navToggle, setNavToggle] = useState(false);
+  const [navToggle, setNavToggle] = useState(false)
+  const [pathWithSection, setPathSection] = useState(pathName)
 
-  function handleMobileNav(value: boolean, pageName?: string) {
-    setNavToggle(value);
-    {pageName && handleNavigation(pageName)}
+  function handleMobileNav(value: boolean, section?: string) {
+    setNavToggle(value)
+    if (section)
+      setPathSection(section)
   }
 
 
@@ -49,7 +50,7 @@ export default function Navbar({ pageName, handleNavigation }: navProps) {
       flex flex-col duration-300
         ${navToggle ? 'left-0' : '-left-[400px]'}`}>
         <li>
-          <Link href='/' onClick={() => handleMobileNav(false)}
+          <Link href='/' onClick={() => handleMobileNav(false, ' ')}
             className='h-fit mx-[10%] mt-[50px] py-[20px] flex items-center gap-[10px] border-b-[1px] border-stone-400'>
             <img src="/icon.webp" alt="icon.webp" width='80' height='80'
               className='rounded-full' />
@@ -57,13 +58,14 @@ export default function Navbar({ pageName, handleNavigation }: navProps) {
               <h2 className='text-4xl font-medium'>{METADATA.creator}</h2>
               <p>Full-stack Website Developer</p>
               <p>@fiqtor</p>
+              {pathWithSection}
             </div>
           </Link>
         </li>
         <li className='my-[20px] mx-[5%] flex flex-col gap-[10px]'>
           {Menu.map((menu: any, index: number) => (
             <div key={index}>
-              {navLink(menu, handleMobileNav, pageName)}
+              {navLink(menu, handleMobileNav, pathWithSection)}
             </div>
           ))}
         </li>
@@ -88,14 +90,17 @@ export default function Navbar({ pageName, handleNavigation }: navProps) {
   )
 }
 
-const navLink = (menu: any, handle: any, pageName: string) => (
-  <Link href={menu.urlDirect} onClick={() => handle(false, menu.label)} className={`w-full px-[5%] py-[10px] 
-    hover:scale-105 flex items-center 
-    gap-[5px] rounded-[10px] duration-300 ${(menu.label == pageName) ? 
-    'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}>
-    <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
-  </Link>
-)
+const navLink = (menu: any, handle: any, pathWithSection: any) => {
+  const fullPathName = menu.pathName + menu.section
+  return (
+    <Link href={fullPathName} onClick={() => handle(false, fullPathName)} className={`w-full px-[5%] py-[10px] 
+      hover:scale-105 flex items-center 
+      gap-[5px] rounded-[10px] duration-300 ${(fullPathName == pathWithSection) ?
+        'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}>
+      <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
+    </Link>
+  )
+}
 const brandLink = (Svg: any, url: string) => (
   <a href={url} target='_blank' className='flex text-neutral-800 hover:opacity-70
     hover:scale-110 duration-300 dark:text-neutral-300' aria-label={url}>

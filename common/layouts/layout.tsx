@@ -1,25 +1,22 @@
 'use client'
-import { ReactNode, useState } from 'react';
+import { usePathname } from 'next/navigation'
+import { ReactNode } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 interface ContainerProps {
     children: ReactNode;
-    pageNameProp?: string;
     className?: string;
     [propName: string]: ReactNode | string | undefined;
 }
 
-export default function Container({ children, pageNameProp, className = '', ...others }: ContainerProps) {
-    const [pageName, setPageName] = useState((pageNameProp) ? pageNameProp : '');
-
-    function handleNavigation (value: string) {
-        setPageName(value);
-    }
+export default function Container({ children, className = '', ...others }: ContainerProps) {
+    const pathName = usePathname()
     return (
         <>
-            <Navbar pageName={pageName} handleNavigation={handleNavigation} />
+            <Navbar pathName={pathName} />
             <div className={`${className} dark:text-neutral-300`} {...others}>
+                <h1>{pathName}</h1>
                 {children}
             </div>
             <Footer />

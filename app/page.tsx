@@ -13,8 +13,6 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <Home />
   )
 }
