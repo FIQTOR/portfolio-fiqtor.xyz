@@ -39,10 +39,10 @@ export default function ProjectsSection() {
 
       </div>
       <div className='w-full h-24 flex justify-center items-center'>
-        <Link href={`/all-projects`}
+        <a href='/all-projects'
           className='text-blue-600 dark:text-blue-300 flex gap-[5px] items-center hover:opacity-70 duration-100 self-end'>View All Project
           <TbEye className='h-full w-6' />
-        </Link>
+        </a>
       </div>
     </section>
   )
