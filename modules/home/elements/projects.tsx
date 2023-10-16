@@ -4,17 +4,17 @@ import React, { useContext } from 'react'
 import { SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { TbStack2, TbEye } from 'react-icons/tb'
 import { Projects } from '@/common/constant/projects'
-import { ContainerContext } from '@/common/layouts/layout'
+import { ContainerContext } from '@/context/ContainerProvider'
 
 export default function ProjectsSection() {
-  const { fullPathName, setFullPathName } = useContext(ContainerContext)
+  const { setFullPathName } = useContext(ContainerContext)
 
   return (
     <section id='projects' className='px-[5%]'>
       <div className='w-full flex gap-[10px]'>
         <TbStack2 strokeWidth='1' className='w-14 md:w-16 h-full' />
         <div>
-          <h2 className='text-2xl font-semibold md:text-4xl'>Last Projects{fullPathName}</h2>
+          <h2 className='text-2xl font-semibold md:text-4xl'>Last Projects</h2>
           <p className='md:text-xl'>Here is my best project.</p>
         </div>
       </div>

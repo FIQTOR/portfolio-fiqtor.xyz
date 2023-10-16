@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBrandVscode, TbBrandYoutube, TbCloudComputing, TbStack2 } from 'react-icons/tb';
 import { Menu } from '../constant/menu';
-import { ContainerContext } from '../layouts/layout';
+import { ContainerContext } from '@/context/ContainerProvider';
 
 export default function Navbar() {
   const { fullPathName, setFullPathName } = useContext(ContainerContext)
@@ -30,7 +30,7 @@ export default function Navbar() {
 
       {/* Show Sidebar Button */}
       <input type='submit' id='navbar' hidden onClick={() => handleMobileNav(!navToggle)} />
-      <label htmlFor="navbar" className={`absolute z-10 duration-500
+      <label htmlFor="navbar" className={`absolute z-10 duration-300
       top-[10px] cursor-pointer
       ${navToggle ? 'left-[250px] md:left-[350px] rotate-180' : 'left-[10px] rotate-0'}`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
