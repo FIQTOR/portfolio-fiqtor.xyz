@@ -5,26 +5,22 @@ type Project = {
   label: string;
   Svg: any;
   pathName: string;
-  section: string;
 };
 
 export const Menu: Array<Project> = [
   {
     label: "About",
     Svg: TbCloudComputing,
-    pathName: "/",
-    section: "#about"
+    pathName: "/#about"
   },
   {
     label: "Skills",
     Svg: TbBrandVscode,
-    pathName: "/",
-    section: "#skills"
+    pathName: "/#skills"
   },
   {
     label: "All Projects",
     Svg: TbStack2,
-    pathName: "/all-projects",
-    section: ""
+    pathName: "/all-projects"
   },
 ];

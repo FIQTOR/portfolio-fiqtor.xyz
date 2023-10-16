@@ -1,17 +1,20 @@
 'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useContext } from 'react'
 import { SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { TbStack2, TbEye } from 'react-icons/tb'
 import { Projects } from '@/common/constant/projects'
+import { ContainerContext } from '@/common/layouts/layout'
 
 export default function ProjectsSection() {
+  const { fullPathName, setFullPathName } = useContext(ContainerContext)
+
   return (
     <section id='projects' className='px-[5%]'>
       <div className='w-full flex gap-[10px]'>
         <TbStack2 strokeWidth='1' className='w-14 md:w-16 h-full' />
         <div>
-          <h2 className='text-2xl font-semibold md:text-4xl'>Last Projects</h2>
+          <h2 className='text-2xl font-semibold md:text-4xl'>Last Projects{fullPathName}</h2>
           <p className='md:text-xl'>Here is my best project.</p>
         </div>
       </div>
@@ -39,10 +42,10 @@ export default function ProjectsSection() {
 
       </div>
       <div className='w-full h-24 flex justify-center items-center'>
-        <a href='/all-projects'
+        <Link href='/all-projects' onClick={() => setFullPathName('/all-projects')}
           className='text-blue-600 dark:text-blue-300 flex gap-[5px] items-center hover:opacity-70 duration-100 self-end'>View All Project
           <TbEye className='h-full w-6' />
-        </a>
+        </Link>
       </div>
     </section>
   )

@@ -2,23 +2,20 @@
 import { METADATA } from '@/common/constant/metadata';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBrandVscode, TbBrandYoutube, TbCloudComputing, TbStack2 } from 'react-icons/tb';
 import { Menu } from '../constant/menu';
+import { ContainerContext } from '../layouts/layout';
 
-interface navProps {
-  pathName: any;
-}
-
-export default function Navbar({ pathName }: navProps) {
+export default function Navbar() {
+  const { fullPathName, setFullPathName } = useContext(ContainerContext)
   const { theme, setTheme } = useTheme()
   const [navToggle, setNavToggle] = useState(false)
-  const [pathWithSection, setPathSection] = useState(pathName)
 
   function handleMobileNav(value: boolean, section?: string) {
     setNavToggle(value)
     if (section)
-      setPathSection(section)
+      setFullPathName(section)
   }
 
 
@@ -64,7 +61,7 @@ export default function Navbar({ pathName }: navProps) {
         <li className='my-[20px] mx-[5%] flex flex-col gap-[10px]'>
           {Menu.map((menu: any, index: number) => (
             <div key={index}>
-              {navLink(menu, handleMobileNav, pathWithSection)}
+              {navLink(menu, handleMobileNav, fullPathName)}
             </div>
           ))}
         </li>
@@ -89,12 +86,11 @@ export default function Navbar({ pathName }: navProps) {
   )
 }
 
-const navLink = (menu: any, handle: any, pathWithSection: any) => {
-  const fullPathName = menu.pathName + menu.section
+const navLink = (menu: any, handle: any, fullPathName: string) => {
   return (
-    <Link href={fullPathName} onClick={() => handle(false, fullPathName)} className={`w-full px-[5%] py-[10px] 
+    <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-[10px] 
       hover:scale-105 flex items-center 
-      gap-[5px] rounded-[10px] duration-300 ${(fullPathName == pathWithSection) ?
+      gap-[5px] rounded-[10px] duration-300 ${(fullPathName == menu.pathName) ?
         'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}>
       <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
     </Link>
