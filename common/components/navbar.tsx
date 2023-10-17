@@ -18,7 +18,6 @@ export default function Navbar() {
       setFullPathName(section)
   }
 
-
   return (
     <nav className='fixed w-screen h-0 z-[999] dark:text-neutral-300'>
       {/* Dark Mode Switch */}
@@ -30,7 +29,7 @@ export default function Navbar() {
 
       {/* Show Sidebar Button */}
       <input type='submit' id='navbar' hidden onClick={() => handleMobileNav(!navToggle)} />
-      <label htmlFor="navbar" className={`absolute z-10 duration-300
+      <label htmlFor="navbar" className={`absolute z-10 duration-3git00
       top-[10px] cursor-pointer
       ${navToggle ? 'left-[250px] md:left-[350px] rotate-180' : 'left-[10px] rotate-0'}`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -70,7 +69,7 @@ export default function Navbar() {
           <Link href='/talk' onClick={() => handleMobileNav(false)}
             className='m-auto bg-neutral-300 px-[20%] py-[10px]
           rounded-full hover:opacity-70 drop-shadow-md duration-300
-        dark:bg-neutral-700'>
+        dark:bg-neutral-800'>
             Let's Talk
           </Link>
           <div className='flex gap-[10px] my-[5px]'>
@@ -86,16 +85,15 @@ export default function Navbar() {
   )
 }
 
-const navLink = (menu: any, handle: any, fullPathName: string) => {
-  return (
-    <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-[10px] 
+const navLink = (menu: any, handle: any, fullPathName: string) => (
+  <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-[10px] 
       hover:scale-105 flex items-center 
       gap-[5px] rounded-[10px] duration-300 ${(fullPathName == menu.pathName) ?
-        'bg-stone-300 dark:bg-neutral-800' : 'hover:bg-stone-300 hover:dark:bg-neutral-800'}`}>
-      <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
-    </Link>
-  )
-}
+      'bg-neutral-300 dark:bg-neutral-800' : 'hover:bg-neutral-300 hover:dark:bg-neutral-800'}`}>
+    <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
+  </Link>
+)
+
 const brandLink = (Svg: any, url: string) => (
   <a href={url} target='_blank' className='flex text-neutral-800 hover:opacity-70
     hover:scale-110 duration-300 dark:text-neutral-300' aria-label={url}>

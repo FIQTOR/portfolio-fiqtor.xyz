@@ -1,5 +1,5 @@
-import Container from '@/common/components/container'
 import { METADATA } from '@/common/constant/metadata'
+import Layout from '@/common/layouts/layout'
 import Contact from '@/modules/contact'
 import { Metadata } from 'next'
 import React from 'react'
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <Container>
+        <Layout>
             <Contact />
-        </Container>
+        </Layout>
     )
 }

@@ -1,5 +1,5 @@
 'use client'
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { ReactNode } from 'react';
 
@@ -20,6 +20,10 @@ interface ContainerContextProps {
 export default function ContainerProvider({ children }: ContainerContextProps) {
     const pathName = usePathname()
     const [fullPathName, setFullPathName] = useState(pathName)
+
+    useEffect(() => {
+        setFullPathName(pathName + window.location.hash);
+    }, [])
 
     return (
         <ContainerContext.Provider value={{ fullPathName, setFullPathName }}>
