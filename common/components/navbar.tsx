@@ -29,7 +29,7 @@ export default function Navbar() {
 
       {/* Show Sidebar Button */}
       <input type='submit' id='navbar' hidden onClick={() => handleMobileNav(!navToggle)} />
-      <label htmlFor="navbar" className={`absolute z-10 duration-3git00
+      <label htmlFor="navbar" className={`absolute z-10 duration-300
       top-[10px] cursor-pointer
       ${navToggle ? 'left-[250px] md:left-[350px] rotate-180' : 'left-[10px] rotate-0'}`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -40,7 +40,7 @@ export default function Navbar() {
           <path d="M13 7l5 5l-5 5"></path>
         </svg>
       </label>
-      {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30'></div> : ''}
+      {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-50'></div> : ''}
       <ul className={`absolute w-[300px] md:w-[400px] h-screen top-0 bg-stone-100 dark:bg-neutral-900 border-[1px] 
       border-stone-300 dark:border-stone-800 
       flex flex-col duration-300

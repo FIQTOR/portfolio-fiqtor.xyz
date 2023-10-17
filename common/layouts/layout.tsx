@@ -1,7 +1,7 @@
-import { ReactNode, useContext } from 'react';
+
+import { ReactNode } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import { ContainerContext } from '@/context/ContainerProvider';
 
 interface ContainerProps {
     children: ReactNode;

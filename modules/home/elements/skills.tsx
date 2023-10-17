@@ -1,16 +1,13 @@
+'use client'
 import React, { Suspense } from 'react'
-import {
-  SiFacebook,
-  SiGithub
-} from "react-icons/si";
 import {
   TbArrowsLeftRight, TbLanguage, TbLayoutDashboard, TbDatabase,
   TbGitFork,
   TbBrandVscode
 } from 'react-icons/tb';
-import { FcGoogle } from "react-icons/fc";
 import { Processor } from '@/common/components/lottie';
 import { Skills } from '@/common/constant/skills';
+import { motion } from 'framer-motion';
 
 export default function SkillsSection() {
   let classIcon: string = 'w-[40px] h-[40px]';
@@ -36,7 +33,13 @@ export default function SkillsSection() {
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.language?.map((item: any, index: number) => (
                 <div key={index} className='tooltip' data-tooltip={item.tooltip}>
-                  <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  <motion.div
+                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
+                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+                    transition={{ delay: (0.5 * index) }}
+                  >
+                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  </motion.div>
                 </div>
               ))}
             </div>
@@ -51,7 +54,13 @@ export default function SkillsSection() {
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.frontend?.map((item: any, index: number) => (
                 <div key={index} className='tooltip' data-tooltip={item.tooltip}>
-                  <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  <motion.div
+                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
+                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+                    transition={{ delay: (0.5 * index) }}
+                  >
+                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  </motion.div>
                 </div>
               ))}
             </div>
@@ -66,7 +75,13 @@ export default function SkillsSection() {
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.backend?.map((item: any, index: number) => (
                 <div key={index} className='tooltip' data-tooltip={item.tooltip}>
-                  <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  <motion.div
+                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
+                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+                    transition={{ delay: (0.5 * index) }}
+                  >
+                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  </motion.div>
                 </div>
               ))}
             </div>
@@ -81,7 +96,13 @@ export default function SkillsSection() {
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.devops?.map((item: any, index: number) => (
                 <div key={index} className='tooltip' data-tooltip={item.tooltip}>
-                  <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  <motion.div
+                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
+                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+                    transition={{ delay: (0.5 * index) }}
+                  >
+                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
+                  </motion.div>
                 </div>
               ))}
             </div>
@@ -115,6 +136,6 @@ export default function SkillsSection() {
         </div>
       </div>
 
-    </section>
+    </section >
   )
 }
