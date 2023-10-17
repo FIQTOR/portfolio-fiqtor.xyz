@@ -5,7 +5,8 @@ import {
     SiLaravel, SiMysql, SiPostgresql,
     SiAmazonaws, SiAmazonrds, SiAmazonec2, SiGit, SiGithubpages,
     SiFacebook,
-    SiGithub
+    SiGithub,
+    SiFramer
 } from "react-icons/si";
 import {
     TbArrowsLeftRight, TbLanguage, TbLayoutDashboard, TbDatabase,
@@ -53,6 +54,7 @@ export const Skills: Skills =
         { SvgIcon: SiBootstrap, tooltip: 'Bootstrap', class: 'fill-purple-500' },
         { SvgIcon: SiJquery, tooltip: 'JQuery', class: 'fill-blue-600' },
         { SvgIcon: SiSass, tooltip: 'Sass', class: 'fill-pink-600' },
+        { SvgIcon: SiFramer, tooltip: 'FramerMotion', class: 'fill-stone-950 dark:fill-white' },
     ],
     backend: [
         { SvgIcon: SiLaravel, tooltip: 'Laravel', class: 'fill-red-600' },
