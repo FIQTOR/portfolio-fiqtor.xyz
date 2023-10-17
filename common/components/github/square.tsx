@@ -17,7 +17,7 @@ export default function Square({ data }: squareProps) {
                         }}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            transition={{ delay: (0.1 * index) }}
+                            transition={{ delay: (Math.random() * (1 - 0.1 + 1) + 0.1) }}
                         />
                     )}
                 </div>
