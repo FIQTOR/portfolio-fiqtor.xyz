@@ -32,7 +32,9 @@ export default function SkillsSection() {
             </h3>
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.language?.map((item: any, index: number) => (
-                <div key={index} className='tooltip' data-tooltip={item.tooltip}>
+                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-300 
+                before:dark:bg-white before:content-[attr(data-tooltip)]'
+                  data-tooltip={item.tooltip}>
                   <motion.div
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -53,7 +55,9 @@ export default function SkillsSection() {
             </h3>
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.frontend?.map((item: any, index: number) => (
-                <div key={index} className='tooltip' data-tooltip={item.tooltip}>
+                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-300 
+                before:dark:bg-white before:content-[attr(data-tooltip)]'
+                  data-tooltip={item.tooltip}>
                   <motion.div
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -74,7 +78,9 @@ export default function SkillsSection() {
             </h3>
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.backend?.map((item: any, index: number) => (
-                <div key={index} className='tooltip' data-tooltip={item.tooltip}>
+                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-300 
+                before:dark:bg-white before:content-[attr(data-tooltip)]'
+                  data-tooltip={item.tooltip}>
                   <motion.div
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -95,7 +101,9 @@ export default function SkillsSection() {
             </h3>
             <div className='flex flex-wrap gap-[10px] md:gap-[20px]'>
               {Skills.devops?.map((item: any, index: number) => (
-                <div key={index} className='tooltip' data-tooltip={item.tooltip}>
+                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-300 
+                before:dark:bg-white before:content-[attr(data-tooltip)]'
+                  data-tooltip={item.tooltip}>
                   <motion.div
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}

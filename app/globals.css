@@ -26,40 +26,41 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #e8e8e8;
+  background: #e8e8e8;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #57534e;
-    border-radius: 5px;
-}
-
-.tooltip {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.tooltip::before {
-  position: absolute;
-  content: attr(data-tooltip);
-  padding: 3px 10px;
-  background-color: #a3a3a3;
-  transform: translateY(-50px);
+  background-color: #57534e;
   border-radius: 5px;
-  color: white;
-  scale: 0;
-  transition: 150ms;
 }
-.tooltip:hover::before {
-  scale: 1;
+
+@layer components {
+  .tooltip {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tooltip::before {
+    position: absolute;
+    padding: 3px 10px;
+    transform: translateY(-50px);
+    border-radius: 5px;
+    scale: 0;
+    transition: 150ms;
+  }
+
+  .tooltip:hover::before {
+    scale: 1;
+  }
 }

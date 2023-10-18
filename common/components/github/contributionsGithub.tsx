@@ -43,7 +43,7 @@ export async function Contributions() {
                     <div className='p-[20px] min-w-[640px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800'>
                         {!data && <p>Invalid Gthub Token!</p>}
                         <div className='w-full flex justify-start'>
-                            {data && data.user.contributionsCollection.contributionCalendar.months.slice(1).map((month: any, index: number) =>
+                            {data && data.user.contributionsCollection.contributionCalendar.months.map((month: any, index: number) =>
                                 <div key={index} style={{ minWidth: `${(month.totalWeeks * 1.9)}%` }}>
                                     <p className='text-[12px] md:text-base'>{month.name}</p>
                                 </div>
