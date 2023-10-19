@@ -56,7 +56,7 @@ export async function Contributions() {
           <Square data={data} />
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 

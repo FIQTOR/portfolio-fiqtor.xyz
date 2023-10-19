@@ -71,7 +71,7 @@ export default function SkillsSection() {
           </div>
 
           <div className='flex flex-col md:flex-row gap-5 md:gap-7'>
-            <h3 className='w-fit min-w-[180px] h-fit px-7 py-3 border border-stone-300 rounded-full
+            <h3 className='min-w-[180px] px-7 py-3 border border-stone-300 rounded-full
                 md:text-xl flex justify-center items-center gap-2 dark:border-neutral-800 dark:bg-neutral-800'>
               <TbDatabase strokeWidth='1' className='w-7 h-7' />
               Backend
@@ -118,7 +118,7 @@ export default function SkillsSection() {
         </div>
 
 
-        <div className='absolute left-0 w-full md:relative md:w-1/2 z-[-1] md:z-[1]'>
+        <div className='absolute left-0 w-full md:relative md:w-1/2 z-[-1]'>
           <Processor />
         </div>
       </div>
