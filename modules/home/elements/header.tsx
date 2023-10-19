@@ -27,7 +27,7 @@ export default function Header() {
                 >
                     <svg className='w-full h-full md:w-1/2 z-[-1] fill-neutral-200 dark:fill-neutral-800 md:scale-[2]'
                         id="visual" viewBox="0 0 900 900" width="100" height="100" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(427.92601285821485 412.79585478676427)"><path d="M173.3 -296.2C191.7 -289.6 150.8 -176.6 174.4 -109.5C198 -42.3 286 -21.2 329.3 25C372.6 71.2 371.2 142.3 346.5 207.6C321.9 272.8 273.9 332.1 212.3 325C150.7 318 75.3 244.5 -9.2 260.4C-93.7 276.4 -187.5 381.8 -216.5 370C-245.5 358.3 -209.8 229.4 -232.1 148.2C-254.4 67 -334.7 33.5 -317.1 10.2C-299.5 -13.2 -183.9 -26.3 -114.8 -26.3C-45.6 -26.3 -22.8 -13.2 -11.4 -23.8C0 -34.3 0 -68.7 38.7 -135.8C77.5 -202.9 155 -302.8 173.3 -296.2"></path></g></svg>
-                    <img src="/img/src/mobile.webp" alt="mobile.webp" width={'cover'} height={'100%'} className='z-[1] h-full max-h-[450px] bg-cover absolute' />
+                    <img src="/img/src/mobile.webp" alt="mobile.webp" width={'50px'} height={'100%'} className='z-[1] h-full max-h-[450px] bg-cover absolute' />
                 </motion.div>
 
                 <div className='absolute w-full h-full top-0 left-0 z-[-1] overflow-x-hidden'>
