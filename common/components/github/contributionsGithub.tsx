@@ -8,66 +8,57 @@ export async function Contributions() {
   const contributionsData = getContributionsCount(data);
 
   return (
-    <>
-      <div className='mt-[50px] px-0 md:px-[5%]'>
-        <div className='flex items-center gap-[10px]'>
-          <TbBrandGithub className='w-7 h-7' />
-          <h2 className='text-2xl font-semibold'>Contributions</h2>
+    <div className='mt-12 md:px-[5%]'>
+      <div className='flex items-center gap-3'>
+        <TbBrandGithub className='w-7 h-7' />
+        <h2 className='text-2xl font-semibold'>Contributions</h2>
+      </div>
+      <p>My contributions from last year on github.</p>
+      <a href={`https://github.com/${METADATA.githubUsername}`} target='_blank' aria-label='View On Github'
+        className='text-blue-600 flex gap-1 items-center hover:opacity-70 duration-100'>View On Github
+        <TbEye className='h-full w-6' />
+      </a>
+      <div className='my-3 grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 justify-around gap-3'>
+        <div className='w-full p-3 rounded-md border border-stone-300 dark:border-neutral-800'>
+          <span>Total</span>
+          <p className='text-green-600 text-2xl font-semibold'>
+            {contributionsData.total}
+          </p>
         </div>
-        <p>My contributions from last year on github.</p>
-        <a href={`https://github.com/${METADATA.githubUsername}`} target='_blank' aria-label='View On Github'
-          className='text-blue-600 flex gap-[5px] items-center hover:opacity-70 duration-100'>View On Github
-          <TbEye className='h-full w-6' />
-        </a>
-        <div className='my-[10px] grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 justify-around gap-[10px]'>
-          <div className='w-full p-[10px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800 dark:bg-neutral-800'>
-            <h3>Total</h3>
-            <p className='text-green-600 text-2xl font-semibold'>
-              {contributionsData.total}
-            </p>
-          </div>
-          <div className='w-full p-[10px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800 dark:bg-neutral-800'>
-            <h3>This Month</h3>
-            <p className='text-green-600 text-2xl font-semibold'>
-              {contributionsData.thisMonth}
-            </p>
-          </div>
-          <div className='w-full p-[10px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800 dark:bg-neutral-800'>
-            <h3>This week</h3>
-            <p className='text-green-600 text-2xl font-semibold'>
-              {contributionsData.thisWeek}
-            </p>
-          </div>
+        <div className='w-full p-3 rounded-md border border-stone-300 dark:border-neutral-800'>
+          <span>This Month</span>
+          <p className='text-green-600 text-2xl font-semibold'>
+            {contributionsData.thisMonth}
+          </p>
         </div>
-        <div className='w-full h-full pb-[20px] overflow-x-auto'>
-          <div className='p-[20px] min-w-[640px] rounded-md border-[1px] border-stone-300 dark:border-neutral-800'>
-            {!data && <p>Invalid Gthub Token!</p>}
-            <div className='w-full flex justify-start'>
-              {data && data.user.contributionsCollection.contributionCalendar.months.map((month: any, index: number) => {
-                return (
-                  <>
-                    {month.totalWeeks > 2 && <div key={index} style={{ minWidth: `${(month.totalWeeks * 1.9)}%` }}>
-                      <p className='text-[12px] md:text-base'>{month.name}</p>
-                    </div>}
-                  </>
-                )
-              }
-              )}
-            </div>
-            <Square data={data} />
-          </div>
+        <div className='w-full p-3 rounded-md border border-stone-300 dark:border-neutral-800'>
+          <span>This week</span>
+          <p className='text-green-600 text-2xl font-semibold'>
+            {contributionsData.thisWeek}
+          </p>
         </div>
-
-        {/* <img src="https://ghchart.rshah.org/000000/fiqtor" alt="Github Contributions" className='w-full' /> */}
-      </div >
-    </>
+      </div>
+      <div className='w-full h-full pb-5 overflow-x-auto'>
+        <div className='p-5 min-w-[640px] rounded-md border border-stone-300 dark:border-neutral-800'>
+          {!data && <p>Invalid Gthub Token!</p>}
+          <div className='flex text-xs md:text-base'>
+            {data && data.user.contributionsCollection.contributionCalendar.months.map((month: any, index: number) => {
+              return (
+                <span key={index} style={{ minWidth: `${(month.totalWeeks * 1.9)}%` }}>
+                  {month.totalWeeks > 2 &&
+                    month.name
+                  }
+                </span>
+              )
+            }
+            )}
+          </div>
+          <Square data={data} />
+        </div>
+      </div>
+    </div >
   )
 }
-
-// async function getUserGithub() {
-//   const res = await fetch(`https://api.github.com/users/${METADATA.githubUsername}`);
-//   return res.json();
-// }
 
 async function getContributions() {
   const token = process.env.GITHUB_TOKEN;

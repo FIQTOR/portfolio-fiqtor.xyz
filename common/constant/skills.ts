@@ -41,8 +41,8 @@ export const Skills: Skills =
     language: [
         { SvgIcon: SiHtml5, tooltip: 'HTML5', class: 'fill-orange-500' },
         { SvgIcon: SiCss3, tooltip: 'CSS3', class: 'fill-blue-400' },
-        { SvgIcon: SiJavascript, tooltip: 'Javascript', class: 'fill-yellow-400 rounded-[5px]' },
-        { SvgIcon: SiTypescript, tooltip: 'Typescript', class: 'fill-blue-800 rounded-[5px]' },
+        { SvgIcon: SiJavascript, tooltip: 'Javascript', class: 'fill-yellow-400 rounded' },
+        { SvgIcon: SiTypescript, tooltip: 'Typescript', class: 'fill-blue-800 rounded' },
         { SvgIcon: SiPhp, tooltip: 'PHP', class: 'fill-purple-500' },
         { SvgIcon: SiCplusplus, tooltip: 'C++', class: 'fill-blue-600' },
         { SvgIcon: SiCsharp, tooltip: 'CSharp', class: 'fill-green-600' },

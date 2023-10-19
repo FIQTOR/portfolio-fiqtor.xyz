@@ -8,7 +8,7 @@ export default function index() {
   return (
     <>
       <Header />
-      <main className='my-[20vw] md:my-[5vw] flex flex-col gap-[200px]'>
+      <main className='my-[20vw] md:my-[5vw] flex flex-col gap-52'>
         <About />
         <Skills />
         <Projects />

@@ -19,19 +19,19 @@ export default function Navbar() {
   }
 
   return (
-    <nav className='fixed w-screen h-0 z-[999] dark:text-neutral-300'>
+    <nav className='fixed w-screen h-0 z-50 dark:text-neutral-300'>
       {/* Dark Mode Switch */}
       <label htmlFor="dark" className={`absolute w-7 h-7 bg-[#121212] rounded-full z-10 duration-500 ease-out cursor-pointer
-      -translate-y-10 right-[-50px] dark:translate-y-[5px] dark:right-[15px]`}></label>
+      -translate-y-10 -right-10 dark:translate-y-2 dark:right-4`}></label>
       <input type="checkbox" onClick={() => setTheme(theme == "dark" ? "light" : "dark")} id='dark'
-        className={`absolute top-[10px] right-[20px] w-8 h-8 rounded-full cursor-pointer appearance-none duration-200
+        className={`absolute top-3 right-5 w-8 h-8 rounded-full cursor-pointer appearance-none duration-200
         bg-yellow-300 dark:bg-slate-200`} />
 
       {/* Show Sidebar Button */}
       <input type='submit' id='navbar' hidden onClick={() => handleMobileNav(!navToggle)} />
       <label htmlFor="navbar" className={`absolute z-10 duration-300
-      top-[10px] cursor-pointer
-      ${navToggle ? 'left-[250px] md:left-[350px] rotate-180' : 'left-[10px] rotate-0'}`}>
+      top-5 cursor-pointer
+      ${navToggle ? 'left-64 md:left-[350px] rotate-180' : 'left-5 rotate-0'}`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
           viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"
           fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -41,13 +41,13 @@ export default function Navbar() {
         </svg>
       </label>
       {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-50'></div> : ''}
-      <ul className={`absolute w-[300px] md:w-[400px] h-screen top-0 bg-stone-100 dark:bg-neutral-900 border-[1px] 
+      <ul className={`absolute w-80 md:w-[400px] h-screen top-0 bg-stone-100 dark:bg-neutral-900 border 
       border-stone-300 dark:border-stone-800 
       flex flex-col duration-300
-        ${navToggle ? 'left-0' : '-left-[400px]'}`}>
+        ${navToggle ? 'left-0' : '-left-full'}`}>
         <li>
           <Link href='/' onClick={() => handleMobileNav(false, ' ')}
-            className='h-fit mx-[10%] mt-[50px] py-[20px] flex items-center gap-[10px] border-b-[1px] border-stone-400'>
+            className='h-fit mx-[10%] mt-12 py-5 flex items-center gap-3 border-b border-stone-400'>
             <img src="/icon.webp" alt="icon.webp" width='80' height='80'
               className='rounded-full' />
             <div className='flex flex-col'>
@@ -57,22 +57,22 @@ export default function Navbar() {
             </div>
           </Link>
         </li>
-        <li className='my-[20px] mx-[5%] flex flex-col gap-[10px]'>
+        <li className='my-4 mx-[5%] flex flex-col gap-5'>
           {Menu.map((menu: any, index: number) => (
             <div key={index}>
               {navLink(menu, handleMobileNav, fullPathName)}
             </div>
           ))}
         </li>
-        <li className='flex flex-col items-center gap-[5px] my-[10px]'>
+        <li className='flex flex-col items-center gap-2 my-4'>
           <p>Interested in Working Together?</p>
           <Link href='/talk' onClick={() => handleMobileNav(false)}
-            className='m-auto bg-neutral-300 px-[20%] py-[10px]
+            className='m-auto bg-neutral-300 px-[20%] py-4
           rounded-full hover:opacity-70 drop-shadow-md duration-300
         dark:bg-neutral-800'>
             Let's Talk
           </Link>
-          <div className='flex gap-[10px] my-[5px]'>
+          <div className='flex gap-4 my-2'>
             {brandLink(TbBrandInstagram, 'https://www.instagram.com/fiqtorr')}
             {brandLink(TbBrandGithub, 'https://www.github.com/fiqtor')}
             {brandLink(TbBrandYoutube, 'https://www.youtube.com/@fiqtor')}
@@ -86,9 +86,9 @@ export default function Navbar() {
 }
 
 const navLink = (menu: any, handle: any, fullPathName: string) => (
-  <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-[10px] 
+  <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-3
       hover:scale-105 flex items-center 
-      gap-[5px] rounded-[10px] duration-300 ${(fullPathName == menu.pathName) ?
+      gap-2 rounded-xl duration-300 ${(fullPathName == menu.pathName) ?
       'bg-neutral-300 dark:bg-neutral-800' : 'hover:bg-neutral-300 hover:dark:bg-neutral-800'}`}>
     <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
   </Link>

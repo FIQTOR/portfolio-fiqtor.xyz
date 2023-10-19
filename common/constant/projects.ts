@@ -34,7 +34,7 @@ export const Projects: Array<Project> = [
       {
         SvgIcon: SiTypescript,
         title: 'Typescript',
-        class: 'fill-blue-800 rounded-[5px]'
+        class: 'fill-blue-800 rounded'
       },
     ],
   },
@@ -57,7 +57,7 @@ export const Projects: Array<Project> = [
       {
         SvgIcon: SiTypescript,
         title: 'Typescript',
-        class: 'fill-blue-800 rounded-[5px]'
+        class: 'fill-blue-800 rounded'
       },
     ],
   }
