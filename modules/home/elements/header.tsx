@@ -14,8 +14,8 @@ export default function Header() {
                     className='w-full md:w-1/2 h-1/3 md:h-full flex flex-col justify-center pt-14 px-[5%]
                     z-[1]'>
                     <h1 className='text-5xl'>Hi There,</h1>
-                    <h2 className='text-5xl'>I'm {METADATA.authors.name}</h2>
-                    <p className='text-2xl'>I will help you make website responsive and high quality.</p>
+                    <span className='text-5xl'>I'm {METADATA.authors.name}</span>
+                    <span className='text-2xl'>I will help you make website responsive and high quality.</span>
                 </motion.div>
 
 
@@ -31,7 +31,9 @@ export default function Header() {
                             <path d="M173.3 -296.2C191.7 -289.6 150.8 -176.6 174.4 -109.5C198 -42.3 286 -21.2 329.3 25C372.6 71.2 371.2 142.3 346.5 207.6C321.9 272.8 273.9 332.1 212.3 325C150.7 318 75.3 244.5 -9.2 260.4C-93.7 276.4 -187.5 381.8 -216.5 370C-245.5 358.3 -209.8 229.4 -232.1 148.2C-254.4 67 -334.7 33.5 -317.1 10.2C-299.5 -13.2 -183.9 -26.3 -114.8 -26.3C-45.6 -26.3 -22.8 -13.2 -11.4 -23.8C0 -34.3 0 -68.7 38.7 -135.8C77.5 -202.9 155 -302.8 173.3 -296.2"></path>
                         </g>
                     </svg>
-                    <img src="/img/src/mobile.webp" alt="mobile.webp" height={'100%'} className='z-[1] h-full max-h-[450px] bg-cover absolute' />
+                    <div className='absolute z-[1] w-fit h-fit'>
+                        <img src="/img/src/mobile.webp" alt="mobile.webp" width={'100%'} height={'100%'} className='max-h-[450px]' />
+                    </div>
                 </motion.div>
 
                 <div className='absolute w-full h-full top-0 left-0 z-[-1] overflow-x-hidden'>

@@ -9,8 +9,10 @@ export default async function About() {
   return (
     <section id='about' className='w-full pt-12 px-[5%]'>
       <div className='flex flex-col-reverse gap-5 md:gap-0 md:flex-row items-center'>
-        <div className='w-full md:w-1/2 flex justify-center items-center h-[500px]'>
-          <img src="/img/src/mobile2.webp" alt="mobile" height={'100%'} className='h-full bg-cover' />
+        <div className='w-full md:w-1/2 h-full flex justify-center'>
+          <div className='w-fit h-full'>
+            <img src="/img/src/mobile2.webp" alt="mobile" width={'100%'} height={'100%'} className='bg-cover max-h-[500px]' />
+          </div>
         </div>
         <div className='w-full md:w-1/2 flex flex-col gap-7'>
           <div className='flex gap-3 items-center'>
