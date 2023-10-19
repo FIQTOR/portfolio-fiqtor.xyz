@@ -3,7 +3,7 @@ export const METADATA = {
   description:
     'Personal website, portfolio, fullstack website developer',
   keyword:
-    'fiqtor, taufiiqul hakim, programming tips, belajar javascript, belajar typescript',
+    'fiqtor, FIQTOR, taufiiqul hakim, programming tips, belajar javascript, belajar typescript',
   authors: {
     name: 'Taufiiqul Hakim',
     url: process.env.DOMAIN,
