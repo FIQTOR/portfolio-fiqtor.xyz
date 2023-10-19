@@ -10,7 +10,7 @@ export default async function About() {
     <section id='about' className='w-full pt-[50px] px-[5%]'>
       <div className='flex flex-col-reverse gap-[20px] md:gap-0 md:flex-row items-center'>
         <div className='w-full md:w-1/2 flex justify-center items-center h-[500px]'>
-          <img src="/img/src/mobile2.webp" alt="mobile" width={'auto'} height={'100%'} className='h-full bg-cover' />
+          <img src="/img/src/mobile2.webp" alt="mobile" width={'cover'} height={'100%'} className='h-full bg-cover' />
         </div>
         <div className='w-full md:w-1/2 flex flex-col gap-[30px]'>
           <div className='flex gap-[10px] items-center'>
