@@ -5,17 +5,17 @@ import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata: Metadata = {
-    title: `Contact ${METADATA.exTitle}`,
-    alternates: {
-        canonical: process.env.DOMAINE,
-    },
+  title: `Contact ${METADATA.exTitle}`,
+  alternates: {
+    canonical: process.env.DOMAINE,
+  },
 }
 
 
 export default function ContactPage() {
-    return (
-        <Layout>
-            <Contact />
-        </Layout>
-    )
+  return (
+    <Layout>
+      <Contact />
+    </Layout>
+  )
 }
