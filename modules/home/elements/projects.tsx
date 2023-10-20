@@ -31,7 +31,7 @@ export default function ProjectsSection() {
               className='w-full h-auto md:max-w-[33%] border border-stone-300 rounded-xl
           hover:scale-105 duration-300 flex flex-col dark:border-neutral-800 dark:bg-neutral-800 relative'>
               <a className='absolute px-7 py-1 rounded-bl-xl rounded-tr-xl right-0 bg-black bg-opacity-50 
-              flex gap-2 items-center' href={project.urlDirect}>
+              flex gap-2 items-center text-white' href={project.urlDirect}>
                 <span>
                   Demo
                 </span>
