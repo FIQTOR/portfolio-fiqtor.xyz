@@ -123,7 +123,7 @@ export default function SkillsSection() {
 
 
         <div className='absolute left-0 w-full md:relative md:w-1/2 z-[-1]'>
-          {/* <Processor /> */}
+          <Processor />
         </div>
       </div>
 
