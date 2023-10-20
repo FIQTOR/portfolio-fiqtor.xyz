@@ -23,12 +23,12 @@ export const Projects: Array<Project> = [
     icons: [
       {
         SvgIcon: SiNextdotjs,
-        title: 'Next JS',
+        title: 'NextJS',
         class: 'fill-stone-950 dark:fill-white'
       },
       {
         SvgIcon: SiTailwindcss,
-        title: 'Tailwind CSS',
+        title: 'TailwindCSS',
         class: 'fill-blue-400'
       },
       {
@@ -46,12 +46,12 @@ export const Projects: Array<Project> = [
     icons: [
       {
         SvgIcon: SiNextdotjs,
-        title: 'Next JS',
+        title: 'NextJS',
         class: 'fill-stone-950 dark:fill-white'
       },
       {
         SvgIcon: SiTailwindcss,
-        title: 'Tailwind CSS',
+        title: 'TailwindCSS',
         class: 'fill-blue-400'
       },
       {

@@ -15,8 +15,8 @@ export async function Contributions() {
       </div>
       <p>My contributions from last year on github.</p>
       <a href={`https://github.com/${METADATA.githubUsername}`} target='_blank' aria-label='View On Github'
-        className='text-blue-600 flex gap-1 items-center hover:opacity-70 duration-100'>View On Github
-        <TbEye className='h-full w-6' />
+        className='text-blue-600 dark:text-blue-300 flex gap-1 items-center hover:opacity-70 duration-100'>View On Github
+        <TbEye className='h-full w-6 animate-pulse' />
       </a>
       <div className='my-3 grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 justify-around gap-3'>
         <div className='w-full p-3 rounded-md border border-stone-300 dark:border-neutral-800'>

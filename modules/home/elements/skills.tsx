@@ -1,9 +1,10 @@
 'use client'
-import React, { Suspense } from 'react'
+import React from 'react'
 import {
-  TbArrowsLeftRight, TbLanguage, TbLayoutDashboard, TbDatabase,
+  TbLanguage, TbLayoutDashboard, TbDatabase,
   TbGitFork,
-  TbBrandVscode
+  TbBrandVscode,
+  TbArrowsSort
 } from 'react-icons/tb';
 import { Processor } from '@/common/components/lottie';
 import { Skills } from '@/common/constant/skills';
@@ -17,9 +18,9 @@ export default function SkillsSection() {
       <div className='w-full flex items-center'>
         <div className='w-full md:w-1/2 flex flex-col gap-7'>
           <div className='flex gap-3 items-center'>
-            <TbBrandVscode strokeWidth='1' className='w-14 md:w-20 h-full' />
+            <TbBrandVscode strokeWidth='1' className='w-14 md:w-20 h-full text-red-600' />
             <div className='h-fit'>
-              <h2 className='text-2xl font-semibold md:text-4xl'>Skills</h2>
+              <h2 className='text-2xl font-semibold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-indigo-600'>Skills</h2>
               <p className='md:text-xl'>My coding skills.</p>
             </div>
           </div>
@@ -129,7 +130,7 @@ export default function SkillsSection() {
 
       <div className='flex flex-col gap-7'>
         <h1 className='text-2xl font-semibold flex gap-3'>
-          <TbArrowsLeftRight className='w-7 h-7' />
+          <TbArrowsSort className='w-7 h-7 animate-bounce' />
           API mastery</h1>
 
         <div className='flex flex-col md:flex-row flex-wrap gap-5'>
