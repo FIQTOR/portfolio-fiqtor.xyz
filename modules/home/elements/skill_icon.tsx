@@ -6,44 +6,44 @@ import React from 'react'
 export const LanguageSkills = () => (
   <>
     {Skills.language?.map((icon: any, index: number) => (
-      <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
+      <li key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
   before:dark:bg-white before:content-[attr(data-tooltip)]'
         data-tooltip={icon.tooltip}>
         <IconSkills icon={icon} index_={index} />
-      </div>
+      </li>
     ))}
   </>
 )
 export const FrontendSkills = () => (
   <>
     {Skills.frontend?.map((icon: any, index: number) => (
-      <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
+      <li key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
   before:dark:bg-white before:content-[attr(data-tooltip)]'
         data-tooltip={icon.tooltip}>
         <IconSkills icon={icon} index_={index} />
-      </div>
+      </li>
     ))}
   </>
 )
 export const BackendSkills = () => (
   <>
     {Skills.backend?.map((icon: any, index: number) => (
-      <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
+      <li key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
   before:dark:bg-white before:content-[attr(data-tooltip)]'
         data-tooltip={icon.tooltip}>
         <IconSkills icon={icon} index_={index} />
-      </div>
+      </li>
     ))}
   </>
 )
 export const DevopsSkills = () => (
   <>
     {Skills.devops?.map((icon: any, index: number) => (
-      <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
+      <li key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
   before:dark:bg-white before:content-[attr(data-tooltip)]'
         data-tooltip={icon.tooltip}>
         <IconSkills icon={icon} index_={index} />
-      </div>
+      </li>
     ))}
   </>
 )

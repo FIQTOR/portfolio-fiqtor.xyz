@@ -29,9 +29,9 @@ export default function SkillsSection() {
               <TbLanguage strokeWidth='1' className='w-7 h-7' />
               Language
             </h3>
-            <div className='flex flex-wrap gap-3 md:gap-5'>
+            <ul className='flex flex-wrap gap-3 md:gap-5'>
               <LanguageSkills />
-            </div>
+            </ul>
           </div>
 
           <div className='flex flex-col md:flex-row gap-5 md:gap-7'>
@@ -40,9 +40,9 @@ export default function SkillsSection() {
               <TbLayoutDashboard strokeWidth='1' className='w-7 h-7' />
               Frontend
             </h3>
-            <div className='flex flex-wrap gap-3 md:gap-5'>
+            <ul className='flex flex-wrap gap-3 md:gap-5'>
               <FrontendSkills />
-            </div>
+            </ul>
           </div>
 
           <div className='flex flex-col md:flex-row gap-5 md:gap-7'>
@@ -51,9 +51,9 @@ export default function SkillsSection() {
               <TbDatabase strokeWidth='1' className='w-7 h-7' />
               Backend
             </h3>
-            <div className='flex flex-wrap gap-3 md:gap-5'>
+            <ul className='flex flex-wrap gap-3 md:gap-5'>
               <BackendSkills />
-            </div>
+            </ul>
           </div>
 
           <div className='flex flex-col md:flex-row gap-5 md:gap-7'>
@@ -62,9 +62,9 @@ export default function SkillsSection() {
               <TbGitFork strokeWidth='1' className='w-7 h-7' />
               DevOps
             </h3>
-            <div className='flex flex-wrap gap-3 md:gap-5'>
+            <ul className='flex flex-wrap gap-3 md:gap-5'>
               <DevopsSkills />
-            </div>
+            </ul>
           </div>
         </div>
 

@@ -55,7 +55,7 @@ export async function Contributions() {
           </div>
           <div className='flex gap-px md:gap-[3px]'>
             {data && data.user.contributionsCollection.contributionCalendar.weeks.slice(1).map((week: any, index: number) =>
-              <span key={index} className='w-full flex flex-col gap-px md:gap-1'>
+              <ul key={index} className='w-full flex flex-col gap-px md:gap-1'>
                 {week.contributionDays.map((contributionDay: any, index_: number) => {
                   const color = ((contributionDay.contributionCount == 0) ? '' : contributionDay.color)
                   return (
@@ -63,7 +63,7 @@ export async function Contributions() {
                   )
                 }
                 )}
-              </span>
+              </ul>
             )}
           </div>
         </div>

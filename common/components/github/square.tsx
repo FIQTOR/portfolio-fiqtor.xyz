@@ -8,7 +8,7 @@ interface squareProps {
 }
 
 const Square = ({ color, key }: squareProps) => (
-    <motion.div key={key} className={`aspect-square bg-neutral-300 dark:bg-neutral-800`}
+    <motion.li key={key} className={`aspect-square bg-neutral-300 dark:bg-neutral-800`}
         style={{
             backgroundColor: `${color}`
         }}
@@ -16,7 +16,7 @@ const Square = ({ color, key }: squareProps) => (
         whileInView={{ opacity: 1 }}
         transition={{ delay: (Math.random() * (0.5 - 0.1 + 0.5) + 0.1) }}
         viewport={{ once: true, amount: 0.8 }}
-    ></motion.div>
+    ></motion.li>
 )
 
 export default Square;

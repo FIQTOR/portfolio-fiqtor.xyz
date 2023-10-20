@@ -3,7 +3,7 @@ import { METADATA } from '@/common/constant/metadata';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import React, { useContext, useState } from 'react';
-import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBrandVscode, TbBrandYoutube, TbCloudComputing, TbStack2 } from 'react-icons/tb';
+import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBrandYoutube } from 'react-icons/tb';
 import { Menu } from '../constant/menu';
 import { ContainerContext } from '@/context/ContainerProvider';
 

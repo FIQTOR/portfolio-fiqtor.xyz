@@ -8,11 +8,6 @@ import {
     SiGithub,
     SiFramer
 } from "react-icons/si";
-import {
-    TbArrowsLeftRight, TbLanguage, TbLayoutDashboard, TbDatabase,
-    TbGitFork,
-    TbBrandVscode
-} from 'react-icons/tb';
 import { FcGoogle } from "react-icons/fc";
 
 type Item = {

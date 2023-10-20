@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 import type { LottiePlayer } from 'lottie-web';
-import Loading from './loading';
 
 export const Processor = () => {
   const ref = useRef<HTMLDivElement>(null);

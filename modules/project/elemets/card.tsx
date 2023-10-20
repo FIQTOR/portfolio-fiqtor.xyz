@@ -31,15 +31,15 @@ export default function Card() {
                                 <h3 className='font-semibold text-xl'>{project.title}</h3>
                                 <p>{project.description}</p>
                             </div>
-                            <div className='h-full flex flex-wrap items-end gap-3 pb-4 px-4 justify-self-end'>
+                            <ul className='h-full flex flex-wrap items-end gap-3 pb-4 px-4 justify-self-end'>
                                 {project.icons.map((icon: any, index_: number) => (
-                                    <div key={index_} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
+                                    <li key={index_} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
                                     before:dark:bg-white before:content-[attr(data-tooltip)]'
                                         data-tooltip={icon.title}>
                                         <icon.SvgIcon className={`w-7 h-7 ${icon.class} `} />
-                                    </div>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
 
