@@ -16,6 +16,7 @@ export default function Square({ color, key }: squareProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: (Math.random() * (0.5 - 0.1 + 0.5) + 0.1) }}
+            viewport={{ once: true, amount: 0.8 }}
         ></motion.div>
     )
 }

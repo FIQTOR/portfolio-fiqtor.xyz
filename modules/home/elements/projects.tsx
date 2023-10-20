@@ -24,6 +24,7 @@ export default function ProjectsSection() {
         initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
         whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ delay: 0.5 }}
+        viewport={{ once: true, amount: 0.8 }}
       >
         <div className='flex flex-col md:flex-row gap-5 pt-5'>
           {Projects.slice(0, 3).map((project: any, index: number) => (

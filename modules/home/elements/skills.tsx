@@ -39,6 +39,7 @@ export default function SkillsSection() {
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
                     transition={{ delay: (0.5 * index) }}
+                    viewport={{ once: true, amount: 0.8 }}
                   >
                     <item.SvgIcon className={`${classIcon} ${item.class}`} />
                   </motion.div>
@@ -62,6 +63,7 @@ export default function SkillsSection() {
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
                     transition={{ delay: (0.5 * index) }}
+                    viewport={{ once: true, amount: 0.8 }}
                   >
                     <item.SvgIcon className={`${classIcon} ${item.class}`} />
                   </motion.div>
@@ -85,6 +87,7 @@ export default function SkillsSection() {
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
                     transition={{ delay: (0.5 * index) }}
+                    viewport={{ once: true, amount: 0.8 }}
                   >
                     <item.SvgIcon className={`${classIcon} ${item.class}`} />
                   </motion.div>
@@ -108,6 +111,7 @@ export default function SkillsSection() {
                     initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
                     whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
                     transition={{ delay: (0.5 * index) }}
+                    viewport={{ once: true, amount: 0.8 }}
                   >
                     <item.SvgIcon className={`${classIcon} ${item.class}`} />
                   </motion.div>
