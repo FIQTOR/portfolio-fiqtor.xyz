@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import {
   TbLanguage, TbLayoutDashboard, TbDatabase,
@@ -8,10 +7,9 @@ import {
 } from 'react-icons/tb';
 import { Processor } from '@/common/components/lottie';
 import { Skills } from '@/common/constant/skills';
-import { motion } from 'framer-motion';
+import { BackendSkills, DevopsSkills, FrontendSkills, LanguageSkills } from './skill_icon';
 
 export default function SkillsSection() {
-  let classIcon: string = 'w-10 h-10';
   return (
     <section id='skills' className='w-full px-[5%] flex flex-col gap-5'>
 
@@ -32,20 +30,7 @@ export default function SkillsSection() {
               Language
             </h3>
             <div className='flex flex-wrap gap-3 md:gap-5'>
-              {Skills.language?.map((item: any, index: number) => (
-                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
-                before:dark:bg-white before:content-[attr(data-tooltip)]'
-                  data-tooltip={item.tooltip}>
-                  <motion.div
-                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
-                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-                    transition={{ delay: (0.5 * index) }}
-                    viewport={{ once: true, amount: 0.8 }}
-                  >
-                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
-                  </motion.div>
-                </div>
-              ))}
+              <LanguageSkills />
             </div>
           </div>
 
@@ -56,20 +41,7 @@ export default function SkillsSection() {
               Frontend
             </h3>
             <div className='flex flex-wrap gap-3 md:gap-5'>
-              {Skills.frontend?.map((item: any, index: number) => (
-                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
-                before:dark:bg-white before:content-[attr(data-tooltip)]'
-                  data-tooltip={item.tooltip}>
-                  <motion.div
-                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
-                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-                    transition={{ delay: (0.5 * index) }}
-                    viewport={{ once: true, amount: 0.8 }}
-                  >
-                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
-                  </motion.div>
-                </div>
-              ))}
+              <FrontendSkills />
             </div>
           </div>
 
@@ -80,20 +52,7 @@ export default function SkillsSection() {
               Backend
             </h3>
             <div className='flex flex-wrap gap-3 md:gap-5'>
-              {Skills.backend?.map((item: any, index: number) => (
-                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
-                before:dark:bg-white before:content-[attr(data-tooltip)]'
-                  data-tooltip={item.tooltip}>
-                  <motion.div
-                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
-                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-                    transition={{ delay: (0.5 * index) }}
-                    viewport={{ once: true, amount: 0.8 }}
-                  >
-                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
-                  </motion.div>
-                </div>
-              ))}
+              <BackendSkills />
             </div>
           </div>
 
@@ -104,20 +63,7 @@ export default function SkillsSection() {
               DevOps
             </h3>
             <div className='flex flex-wrap gap-3 md:gap-5'>
-              {Skills.devops?.map((item: any, index: number) => (
-                <div key={index} className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
-                before:dark:bg-white before:content-[attr(data-tooltip)]'
-                  data-tooltip={item.tooltip}>
-                  <motion.div
-                    initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
-                    whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-                    transition={{ delay: (0.5 * index) }}
-                    viewport={{ once: true, amount: 0.8 }}
-                  >
-                    <item.SvgIcon className={`${classIcon} ${item.class}`} />
-                  </motion.div>
-                </div>
-              ))}
+              <DevopsSkills />
             </div>
           </div>
         </div>
