@@ -14,7 +14,7 @@ const Footer = () => (
       </div>
       <div className='tooltip before:text-neutral-700 dark:text-white before:bg-neutral-200 
           before:dark:bg-white before:content-[attr(data-tooltip)]'
-        data-tooltip='TailwindCss'>
+        data-tooltip='TailwindCSS'>
         <SiTailwindcss className={`w-8 h-8 fill-blue-400 `} />
       </div>
     </span>
