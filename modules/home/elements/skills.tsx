@@ -79,10 +79,10 @@ export default function SkillsSection() {
           <TbArrowsSort className='w-7 h-7 animate-bounce' />
           API mastery</h1>
 
-        <div className='flex flex-col md:flex-row flex-wrap gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
 
           {Skills.API?.map((item: any, index: number) => (
-            <div key={index} className='w-full md:max-w-[350px] border 
+            <div key={index} className='w-full border 
               border-stone-300 p-5 rounded-xl flex flex-col gap-5
               md:hover:scale-105 md:duration-300 dark:border-neutral-800 dark:bg-neutral-800'>
               <h2 className='flex items-center gap-3 text-lg font-semibold'>

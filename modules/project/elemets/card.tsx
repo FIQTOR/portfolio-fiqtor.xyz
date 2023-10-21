@@ -12,11 +12,11 @@ export default function Card() {
                 animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
                 transition={{ delay: 0.25 }}
             >
-                <div className='flex flex-wrap flex-col md:flex-row gap-5 pt-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-5'>
 
                     {Projects.map((project: any, index: number) => (
                         <div key={index}
-                            className='w-full h-auto md:max-w-[33%] border border-stone-300 rounded-xl
+                            className='w-full h-auto border border-stone-300 rounded-xl
                                 hover:scale-105 duration-300 flex flex-col dark:border-neutral-800 dark:bg-neutral-800 relative'>
                             <a className='absolute px-7 py-1 rounded-bl-xl rounded-tr-xl right-0 bg-black bg-opacity-50 
                                     flex gap-2 items-center text-white' href={project.urlDirect}>
