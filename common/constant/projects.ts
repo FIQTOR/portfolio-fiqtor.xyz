@@ -68,7 +68,7 @@ export const Projects: Array<Project> = [
   },
   {
     title: 'Hardware Harmony',
-    description: 'I created a website for a e-commerce that sells services without database.',
+    description: 'I created a website for a e-commerce that sells products without database.',
     urlDirect: 'https://hardware-harmony.vercel.app',
     srcImage: '/img/projects/hardware-harmony.webp',
     icons: [
