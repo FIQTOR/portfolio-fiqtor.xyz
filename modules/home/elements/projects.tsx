@@ -15,15 +15,14 @@ export default function ProjectsSection() {
         <TbStack2 strokeWidth='1' className='w-14 md:w-16 h-full text-yellow-600' />
         <div>
           <h2 className='text-2xl font-semibold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-purple-600'>Last Projects</h2>
-          <p className='md:text-xl'>Here is my best project.</p>
+          <p className='md:text-xl'>Here is my last project.</p>
         </div>
       </div>
 
       <motion.div
         initial={{ opacity: 0, filter: 'blur(15px)', y: 50 }}
         whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-        transition={{ delay: 0.5 }}
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <div className='flex flex-col md:flex-row gap-5 pt-5'>
           {Projects.slice(0, 3).map((project: any, index: number) => (
