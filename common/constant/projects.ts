@@ -16,34 +16,6 @@ type Project = {
 
 export const Projects: Array<Project> = [
   {
-    title: 'Personal Website',
-    description: 'I created personal website for portfolio.',
-    urlDirect: 'https://fiqtor.xyz',
-    srcImage: '/img/projects/lunar-ux.webp',
-    icons: [
-      {
-        SvgIcon: SiNextdotjs,
-        title: 'NextJS',
-        class: 'fill-black dark:fill-white'
-      },
-      {
-        SvgIcon: SiFramer,
-        title: 'FramerMotion',
-        class: 'fill-black dark:fill-white'
-      },
-      {
-        SvgIcon: SiTypescript,
-        title: 'Typescript',
-        class: 'fill-blue-800 rounded'
-      },
-      {
-        SvgIcon: SiTailwindcss,
-        title: 'TailwindCSS',
-        class: 'fill-blue-400'
-      },
-    ],
-  },
-  {
     title: 'Lunar UX',
     description: 'I created a website for a company that sells services.',
     urlDirect: 'https://lunar-ux.vercel.app',
