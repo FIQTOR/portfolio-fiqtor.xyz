@@ -1,4 +1,4 @@
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiFramer, SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 type Icon = {
   SvgIcon: any;
@@ -15,6 +15,34 @@ type Project = {
 };
 
 export const Projects: Array<Project> = [
+  {
+    title: 'Personal Website',
+    description: 'I created personal website for portfolio.',
+    urlDirect: 'https://fiqtor.xyz',
+    srcImage: '/img/projects/lunar-ux.webp',
+    icons: [
+      {
+        SvgIcon: SiNextdotjs,
+        title: 'NextJS',
+        class: 'fill-black dark:fill-white'
+      },
+      {
+        SvgIcon: SiFramer,
+        title: 'FramerMotion',
+        class: 'fill-black dark:fill-white'
+      },
+      {
+        SvgIcon: SiTypescript,
+        title: 'Typescript',
+        class: 'fill-blue-800 rounded'
+      },
+      {
+        SvgIcon: SiTailwindcss,
+        title: 'TailwindCSS',
+        class: 'fill-blue-400'
+      },
+    ],
+  },
   {
     title: 'Lunar UX',
     description: 'I created a website for a company that sells services.',
@@ -50,14 +78,14 @@ export const Projects: Array<Project> = [
         class: 'fill-stone-950 dark:fill-white'
       },
       {
-        SvgIcon: SiTailwindcss,
-        title: 'TailwindCSS',
-        class: 'fill-blue-400'
-      },
-      {
         SvgIcon: SiTypescript,
         title: 'Typescript',
         class: 'fill-blue-800 rounded'
+      },
+      {
+        SvgIcon: SiTailwindcss,
+        title: 'TailwindCSS',
+        class: 'fill-blue-400'
       },
     ],
   }

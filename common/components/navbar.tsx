@@ -24,7 +24,7 @@ export default function Navbar() {
       <label htmlFor="dark" className={`absolute w-7 h-7 bg-[#121212] rounded-full z-10 duration-500 ease-out cursor-pointer
       -translate-y-10 -right-10 dark:translate-y-2 dark:right-4`}></label>
       <input type="checkbox" onClick={() => setTheme(theme == "dark" ? "light" : "dark")} id='dark'
-        className={`absolute top-3 right-5 w-8 h-8 rounded-full cursor-pointer appearance-none duration-200
+        className={`absolute top-5 right-5 w-8 h-8 rounded-full cursor-pointer appearance-none duration-200
         bg-yellow-300 dark:bg-slate-200`} />
 
       {/* Show Sidebar Button */}
