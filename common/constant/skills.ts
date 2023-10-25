@@ -6,7 +6,8 @@ import {
     SiAmazonaws, SiAmazonrds, SiAmazonec2, SiGit, SiGithubpages,
     SiFacebook,
     SiGithub,
-    SiFramer
+    SiFramer,
+    SiCodeigniter
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 
@@ -55,6 +56,7 @@ export const Skills: Skills =
         { SvgIcon: SiLaravel, tooltip: 'Laravel', class: 'fill-red-600' },
         { SvgIcon: SiMysql, tooltip: 'MySQL', class: 'fill-orange-500' },
         { SvgIcon: SiPostgresql, tooltip: 'PostgreSQL', class: 'fill-blue-700' },
+        { SvgIcon: SiCodeigniter, tooltip: 'Codeigniter4', class: 'fill-red-700' },
     ],
     devops: [
         { SvgIcon: SiAmazonaws, tooltip: 'AWS', class: 'fill-orange-500' },
