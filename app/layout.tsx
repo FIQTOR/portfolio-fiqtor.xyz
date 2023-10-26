@@ -6,8 +6,7 @@ import { Inter } from 'next/font/google'
 import { METADATA } from '@/common/constant/metadata'
 import ThemeProviderContext from '@/context/ThemeProviderContext'
 import { Analytics } from '@vercel/analytics/react'
-import { store } from '@/context/GlobalState/store'
-import { Providers } from '@/context/GlobalState/ReduxProvider'
+import ContainerProvider from '@/context/ContainerProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,12 +46,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProviderContext>
-          <Providers store={store}>
+          <ContainerProvider>
             {children}
-          </Providers>
+          </ContainerProvider>
         </ThemeProviderContext>
         <Analytics />
       </body>
-    </html >
+    </html>
   )
 }

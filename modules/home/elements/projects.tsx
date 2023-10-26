@@ -3,12 +3,11 @@ import Link from 'next/link'
 import React, { useContext } from 'react'
 import { TbStack2, TbEye, TbWorldShare } from 'react-icons/tb'
 import { Projects } from '@/common/constant/projects'
+import { ContainerContext } from '@/context/ContainerProvider'
 import { motion } from 'framer-motion'
-import { useDispatch } from 'react-redux'
-import { setPathNameWithHash } from '@/context/GlobalState/Features/counter/counterSlice'
 
 export default function ProjectsSection() {
-  const dispatch = useDispatch()
+  const { setFullPathName } = useContext(ContainerContext)
 
   return (
     <section id='projects' className='px-[5%]'>
@@ -58,7 +57,7 @@ export default function ProjectsSection() {
         </div>
       </motion.div>
       <div className='w-full h-24 flex justify-center items-center'>
-        <Link href='/all-projects' onClick={() => dispatch(setPathNameWithHash('/all-projects'))}
+        <Link href='/all-projects' onClick={() => setFullPathName('/all-projects')}
           className='text-blue-600 dark:text-blue-300 flex gap-2 items-center hover:opacity-70 duration-100 self-end'>View All Project
           <TbEye className='h-full w-6 animate-pulse' />
         </Link>

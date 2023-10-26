@@ -2,23 +2,20 @@
 import { METADATA } from '@/common/constant/metadata';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { TbBrandGithub, TbBrandInstagram, TbBrandLinkedin, TbBrandTiktok, TbBrandYoutube } from 'react-icons/tb';
 import { Menu } from '../constant/menu';
-import type { RootState } from '@/context/GlobalState/store'
-import { useSelector, useDispatch } from 'react-redux'
-import { setPathNameWithHash } from '@/context/GlobalState/Features/counter/counterSlice'
+import { ContainerContext } from '@/context/ContainerProvider';
 
 export default function Navbar() {
-  const pathNameWithHash = useSelector((state: RootState) => state.counter.pathNameWithHash)
-  const dispatch = useDispatch()
+  const { fullPathName, setFullPathName } = useContext(ContainerContext)
   const { theme, setTheme } = useTheme()
   const [navToggle, setNavToggle] = useState(false)
 
   function handleMobileNav(value: boolean, section?: string) {
     setNavToggle(value)
     if (section)
-      dispatch(setPathNameWithHash(section))
+      setFullPathName(section)
   }
 
   return (
@@ -63,7 +60,7 @@ export default function Navbar() {
         <li className='my-4 mx-[5%] flex flex-col gap-5'>
           {Menu.map((menu: any, index: number) => (
             <div key={index}>
-              {navLink(menu, handleMobileNav, pathNameWithHash)}
+              {navLink(menu, handleMobileNav, fullPathName)}
             </div>
           ))}
         </li>
@@ -88,10 +85,10 @@ export default function Navbar() {
   )
 }
 
-const navLink = (menu: any, handle: any, pathNameWithHash: string) => (
+const navLink = (menu: any, handle: any, fullPathName: string) => (
   <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-3
       hover:scale-105 flex items-center 
-      gap-2 rounded-xl duration-300 ${(pathNameWithHash == menu.pathName) ?
+      gap-2 rounded-xl duration-300 ${(fullPathName == menu.pathName) ?
       'bg-neutral-300 dark:bg-neutral-800' : 'hover:bg-neutral-300 hover:dark:bg-neutral-800'}`}>
     <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
   </Link>
