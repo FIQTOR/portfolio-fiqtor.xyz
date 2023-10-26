@@ -7,7 +7,8 @@ import {
     SiFacebook,
     SiGithub,
     SiFramer,
-    SiCodeigniter
+    SiCodeigniter,
+    SiRedux
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 
@@ -51,6 +52,7 @@ export const Skills: Skills =
         { SvgIcon: SiJquery, tooltip: 'JQuery', class: 'fill-blue-600' },
         { SvgIcon: SiSass, tooltip: 'Sass', class: 'fill-pink-600' },
         { SvgIcon: SiFramer, tooltip: 'FramerMotion', class: 'fill-stone-950 dark:fill-white' },
+        { SvgIcon: SiRedux, tooltip: 'ReduxToolkit', class: 'fill-purple-800' },
     ],
     backend: [
         { SvgIcon: SiLaravel, tooltip: 'Laravel', class: 'fill-red-600' },
