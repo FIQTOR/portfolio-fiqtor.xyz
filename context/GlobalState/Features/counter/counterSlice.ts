@@ -7,7 +7,9 @@ export interface CounterNavState {
 }
 
 const initialState: CounterNavState = {
-  pathNameWithHash: (window.location.pathname + window.location.hash)
+  pathNameWithHash: typeof window !== 'undefined'
+  ? window.location.pathname + window.location.hash
+  : '',
 }
 
 export const counterSlice = createSlice({
