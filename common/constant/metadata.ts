@@ -24,6 +24,6 @@ export const METADATA = {
   },
   exTitle: '| FIQTOR',
   profile: 'https://avatars.githubusercontent.com/u/117913964?v=4',
-  githubUsername: 'FIQTOR',
+  githubUsername: process.env.GITHUB_USERNAME,
   githubToken: process.env.GITHUB_TOKEN,
 };

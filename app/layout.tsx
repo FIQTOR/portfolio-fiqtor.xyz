@@ -1,4 +1,4 @@
-// git push --set-upstream fiqtor.xyz master
+// git push --set-upstream portfolio-fiqtor.xyz branch
 
 import './globals.css'
 import type { Metadata } from 'next'
