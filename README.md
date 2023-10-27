@@ -52,5 +52,5 @@
    ```bash
    GITHUB_TOKEN= "your-token"
    ```
-2.  Configure your website personal (metadata, projects, skills) in the @/common/constant/ directory
+2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory
 
