@@ -11,7 +11,7 @@
 <p>NodeJS Version: 18.18.1</p>
 <p>NPM Version: 9.8.1</p>
 
-## Technical Stack
+## Technology Stack
 
 ![Tailwind](https://img.shields.io/badge/Tailwind-white?logo=tailwind-css)
 ![Next](https://img.shields.io/badge/Next_JS-white?logo=nextdotjs&logoColor=black)
@@ -51,6 +51,7 @@
 1.  Configure your github token settings in the .env file, If there is no, duplicate of the .env.example file, and rename it to .env.
 
 ```bash
+GITHUB_USERNAME= "your-github-username"
 GITHUB_TOKEN= "your-token"
 ```
 
