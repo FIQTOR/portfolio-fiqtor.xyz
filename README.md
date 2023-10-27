@@ -48,11 +48,15 @@
 
 ## Usage
 
-1.  Configure your github token settings in the .env file, If there is no, duplicate of the .env.example file, and rename it to .env.
+1.  Configure your github token settings in the .env file, If there is no, duplicate of the .env.example file, and rename it to .env:
 
-```bash
-GITHUB_USERNAME= "your-github-username"
-GITHUB_TOKEN= "your-token"
-```
+    ```bash
+    GITHUB_USERNAME= "your-github-username"
+    GITHUB_TOKEN= "your-token"
+    ```
 
-2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory
+2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory.
+
+## Reference
+
+<a href="https://github.com/Bayusetiawan45/v2.codebayu.com">Bayusetiawan45</a>
