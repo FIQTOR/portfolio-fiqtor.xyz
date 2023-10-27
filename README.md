@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Personal Website v1.4.27
 
-## Getting Started
+😁🖐️Hello website developers, I am here to share the portfolio project that I made for your learning materials (website-developer), don't forget to add it to my favorites so that I can share other projects. 🔥
 
-First, run the development server:
+<a href="https://fiqtor.xyz"><img alt="Website" src="https://img.shields.io/badge/Live_Demo-fiqtor.xyz-white?style=flat&logo=email"></a>
+
+<img src="/public/img/projects/personal-website.webp">
+
+## Website Information
+
+<p>NodeJS Version: 18.18.1</p>
+<p>NPM Version: 9.8.1</p>
+
+## Technical Stack
+
+![Tailwind](https://img.shields.io/badge/Tailwind-white?logo=tailwind-css)
+![Next](https://img.shields.io/badge/Next_JS-white?logo=nextdotjs&logoColor=black)
+![Framer](https://img.shields.io/badge/Framer_Motion-white?logo=framer&logoColor=black)
+
+## Features
+
+- **Personal Website**: Display your professional information, portfolio, and show the projects you've created.
+- **Github Contribution**: With GitHub Contribution, visitors can see your GitHub contributions.
+- **SEO Optimized**: Implement best practices for search engine optimization to increase your online visibility.
+- **Responsive Design**: Ensure a seamless experience across various devices and screen sizes.
+
+## Installation
+
+1. Clone this repository to your local machine using:
+
+   ```bash
+   git clone https://github.com/FIQTOR/portfolio-fiqtor.xyz.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio-fiqtor.xyz
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the server:
+   ```bash
+   npm run dev
+   ```
+   then, open on your browser https://localhost:3000
+
+## Usage
+
+1.  Configure your github token settings in the .env file, If there is no, duplicate of the .env.example file, and rename it to .env.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+GITHUB_TOKEN= "your-token"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory
