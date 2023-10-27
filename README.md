@@ -3,7 +3,6 @@
 😁🖐️Hello website developers, I am here to share the portfolio project that I made for your learning materials (website-developer), don't forget to add it to my favorites so that I can share other projects. 🔥
 
 <a href="https://fiqtor.xyz"><img alt="Website" src="https://img.shields.io/badge/Live_Demo-fiqtor.xyz-white?style=flat&logo=email"></a>
-<<<<<<< HEAD
 
 <img src="/public/img/projects/personal-website.webp">
 
@@ -56,7 +55,6 @@ GITHUB_TOKEN= "your-token"
 ```
 
 2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory
-=======
 
 <img src="/public/img/projects/personal-website.webp">
 
@@ -103,9 +101,9 @@ GITHUB_TOKEN= "your-token"
 ## Usage
 
 1.  Configure your github token settings in the .env file, If there is no, duplicate of the .env.example file, and rename it to .env.
-   ```bash
-   GITHUB_TOKEN= "your-token"
-   ```
-2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory
 
->>>>>>> 0c2e44b701d71a4bf8b5f78ee146493cab1060c0
+```bash
+GITHUB_TOKEN= "your-token"
+```
+
+2.  Configure your website (metadata, projects, skills) in the @/common/constant/ directory
